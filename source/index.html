@@ -5,20 +5,20 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page__header header">
       <nav class="page-header__navigation navigation">
         <a class="navigation__logo"><img src="#"></a>
         <div class="navigation__wrap">
+          <button class="navigation__toggle"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="navigation__list site-list">
-            <li class="navigation__item navigation__item--active"><a>Главная</a></li>
-            <li class="navigation__item"><a href="#">Каталог продукции</a></li>
-            <li class="navigation__item"><a href="#">Подбор программы</a></li>
+            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+            <li class="site-list__item"><a href="#">Каталог продукции</a></li>
+            <li class="site-list__item"><a href="#">Подбор программы</a></li>
           </ul>
         </div>
-        <button class="navigation__toggle"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
     </header>
-    <main class="page__main">
+    <main class="page__main main">
       <section class="promo">
         <div class="promo__wrapper wrapper">
           <h1 class="promo__title">Функциональное питание для котов</h1>
@@ -62,10 +62,10 @@
       </section>
       <section class="example">
         <div class="example__wrapper wrapper">
-          <div class="example__description description">
+          <div class="example__description">
             <h2>Живой пример </h2>
             <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-            <dl class="description__stats">
+            <dl class="example__stats">
               <div>
                 <dt>Снижение веса</dt>
                 <dd>5 Кг</dd>
@@ -98,18 +98,18 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer">
-      <section class="location location__wrapper wrapper">
+    <footer class="page__footer footer">
+      <section class="footer__location wrapper">
         <h2 class="visually-hidden">Наше местоположение</h2>
-        <div class="location__address">
+        <div class="footer__address">
           <h2>приглашаем к сотрудничеству дилеров!</h2>
           <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
       </section>
       <img src="#">
-      <div class="page-footer__wrapper wrapper">
-        <a class="page-footer_logo"><img src="#"></a>
-        <ul class="page-footer__social social">
+      <div class="footer__wrapper wrapper">
+        <a class="footer_logo"><img src="#"></a>
+        <ul class="footer__social social">
           <li class="social__item"><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
           <li class="social__item"><a href="#"><span class="visually-hidden">Инстаграм</span></a></li>
           <li class="social__item"><a href="#"><span class="visually-hidden">Фейсбуке</span></a></li>
