@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="page__body">
     <header class="page-header">
       <nav class="page-header__navigation navigation">
         <a class="navigation__logo"><img src="#"></a>
@@ -18,7 +18,7 @@
         <button class="navigation__toggle"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
     </header>
-    <main>
+    <main class="page__main">
       <section class="promo">
         <div class="promo__wrapper wrapper">
           <h1 class="promo__title">Функциональное питание для котов</h1>
@@ -61,20 +61,27 @@
         </ul>
       </section>
       <section class="example">
-        <h3 class="visually-hidden">Пример похудения кота</h3>
         <div class="example__wrapper wrapper">
-          <h2>Живой пример </h2>
-          <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <dl class="example__stats">
-            <div>
-              <dt>Снижение веса</dt>
-              <dd>5 Кг</dd>
-            </div>
-            <div>
-              <dt>Снижение веса</dt>
-              <dd>60 Дней</dd>
-            </div>
-          </dl>
+          <div class="example__description description">
+            <h2>Живой пример </h2>
+            <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+            <dl class="description__stats">
+              <div>
+                <dt>Снижение веса</dt>
+                <dd>5 Кг</dd>
+              </div>
+              <div>
+                <dt>Снижение веса</dt>
+                <dd>60 Дней</dd>
+              </div>
+            </dl>
+            <table class="example__cost">
+              <tr>
+                <td>Затраты на питание:</td>
+                <td>15 000 Руб.</td>
+              </tr>
+            </table>
+          </div>
           <div class="weight-loss">
             <div class="weight-loss__image">
               <img src="#" class="weight-loss__before">
@@ -90,27 +97,16 @@
           </div>
         </div>
       </section>
-      <section class="location">
-        <h2 class="visually-hidden">Наше местоположение</h2>
-        <div class="location__wrapper wrapper">
-          <div class="location__address">
-            <h2>приглашаем к сотрудничеству дилеров!</h2>
-            <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="page-footer">
-      <section class="location">
+      <section class="location location__wrapper wrapper">
         <h2 class="visually-hidden">Наше местоположение</h2>
-        <div class="location__wrapper wrapper">
-          <div class="location__address">
-            <h2>приглашаем к сотрудничеству дилеров!</h2>
-            <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
+        <div class="location__address">
+          <h2>приглашаем к сотрудничеству дилеров!</h2>
+          <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
       </section>
-      <div><img src="#"></div>
+      <img src="#">
       <div class="page-footer__wrapper wrapper">
         <a class="page-footer_logo"><img src="#"></a>
         <ul class="page-footer__social social">
