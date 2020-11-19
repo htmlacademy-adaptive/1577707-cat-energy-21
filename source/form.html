@@ -6,7 +6,7 @@
   </head>
   <body class="page__body">
     <header class="page__header header">
-      <nav class="page-header__navigation navigation">
+      <nav class="header__navigation navigation">
         <a class="navigation__logo"><img src="#"></a>
         <button class="navigation__toggle"><span class="visually-hidden">Открыть меню</span></button>
         <div class="navigation__wrap">
@@ -24,7 +24,7 @@
         <p class="selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </section>
       <section class="form">
-        <h1 class="visually-hidden">Форма программы</h1>
+        <h2 class="visually-hidden">Форма программы</h2>
         <form class="form__program" method="GET" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend class="visually-hidden">Параметры кота</legend>
@@ -42,6 +42,8 @@
                 <input class="visually-hidden" type="number" id="age" name="age" placeholder="7">
               </li>
             </ul>
+          </fieldset>
+          <fieldset>
             <legend class="visually-hidden">Выбор программы</legend>
             <ul class="form__additionally-list">
               <li class="form__additionally-item">
@@ -71,9 +73,10 @@
               </li>
             </ul>
           </fieldset>
-          <label for="coments">Комментарий</д>
-          <textarea id="coments" name="coments" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
+          <div class="comments">
+            <label for="comments">Комментарий</д>
+            <textarea id="comments" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
           <fieldset>
             <legend>Дополнительно</legend>
             <ul class="form__additional-information-list">
@@ -99,7 +102,7 @@
           <span>*-обязательные поля</span>
         </form>
       </section>
-    </ma  in>
+    </main>
     <footer class="page__footer footer">
       <section class="footer__location wrapper">
         <h2 class="visually-hidden">Наше местоположение</h2>
