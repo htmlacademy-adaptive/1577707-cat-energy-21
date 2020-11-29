@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Кэт энерджи Форма</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page__header header">
@@ -11,9 +12,9 @@
         <button class="navigation__toggle"><span class="visually-hidden">Открыть меню</span></button>
         <div class="navigation__wrap">
           <ul class="navigation__list site-list">
-            <li class="site-list__item"><a>Главная</a></li>
-            <li class="site-list__item"><a href="#">Каталог продукции</a></li>
-            <li class="site-list__item site-list__item--active"><a href="#">Подбор программы</a></li>
+            <li class="site-list__item"><a href="index.html">Главная</a></li>
+            <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="site-list__item site-list__item--active"><a>Подбор программы</a></li>
           </ul>
         </div>
       </nav>
@@ -31,15 +32,15 @@
             <ul class="form__general-list">
               <li class="form__general-item">
                 <label for="name">Имя:*</label>
-                <input class="visually-hidden" type="text" id="name" name="name" placeholder="Барсик">
+                <input class="form__general-input" type="text" id="name" name="name" placeholder="Барсик">
               </li>
               <li class="form__general-item">
                 <label for="weight">Вес (кг):*</label>
-                <input class="visually-hidden" type="number" id="weight" name="weight" placeholder="7">
+                <input class="form__general-input" type="number" id="weight" name="weight" placeholder="7">
               </li>
               <li class="form__general-item">
                 <label for="age">Возраст (лет):*</label>
-                <input class="visually-hidden" type="number" id="age" name="age" placeholder="7">
+                <input class="form__general-input" type="number" id="age" name="age" placeholder="7">
               </li>
             </ul>
           </fieldset>
@@ -47,21 +48,21 @@
             <legend class="visually-hidden">Выбор программы</legend>
             <ul class="form__additionally-list">
               <li class="form__additionally-item">
-                <input class="visually-hidden" type="radio" id="slimming" name="cat-needs" value="Похудение">
+                <input class="visually-hidden form__radio" type="radio" id="slimming" name="cat-needs" value="Похудение">
                 <label for="slimming">Похудение</label>
               </li>
               <li class="form__additionally-item">
-                <input class="visually-hidden" type="radio" id="Weight gain" name="cat-needs" value="Набор массы">
+                <input class="visually-hidden form__radio" type="radio" id="Weight gain" name="cat-needs" value="Набор массы">
                 <label for="Weight gain">Набор массы</label>
               </li>
               <li class="form__additionally-item">
-                <input class="visually-hidden" type="radio" id="not-know" name="cat-needs" value="Не знаю (нужен ваш совет)">
+                <input class="visually-hidden form__radio" type="radio" id="not-know" name="cat-needs" value="Не знаю (нужен ваш совет)">
                 <label for="not-know">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Контактные данные (владельца кота)</legend>
+            <legend class="form__legend">Контактные данные (владельца кота)</legend>
             <ul class="form__details-list">
               <li class="form__details-item">
                 <label for="email">E-mail:*</label>
@@ -75,10 +76,10 @@
           </fieldset>
           <div class="form__comments">
             <label for="comments">Комментарий</д>
-            <textarea id="comments" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form__comments-text" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
           <fieldset>
-            <legend>Дополнительно</legend>
+            <legend class="form__legend">Дополнительно</legend>
             <ul class="form__additional-information-list">
               <li class="form__additional-information-item">
                 <input class="visually-hidden" type="checkbox" id="sweetener" name="sweetener">
@@ -99,12 +100,12 @@
             </ul>
           </fieldset>
           <button class="button" type="submit">Отправить заявку</button>
-          <span>*-обязательные поля</span>
+          <span class="form__post-scriptum">*-обязательные поля</span>
         </form>
       </section>
     </main>
     <footer class="page__footer footer">
-      <section class="footer__location wrapper">
+      <section class="footer__location-grey wrapper">
         <h2 class="visually-hidden">Наше местоположение</h2>
         <div class="footer__address">
           <h2>приглашаем к сотрудничеству дилеров!</h2>
