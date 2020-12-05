@@ -1,3 +1,18 @@
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px 130px;
+  }
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .features__title {
   font-size: 36px;
   line-height: 40px;

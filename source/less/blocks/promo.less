@@ -1,3 +1,22 @@
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo__image {
+  width: 280px;
+  height: 270px;
+  order: 1;
+  @media (min-width: 768px) {
+    width: 709px;
+    height: 609px;
+    order: 3;
+  }
+  @media (min-width: 1440px) {
+    width: 552px;
+    height: 499px;
+  }
+}
 .promo__title {
   font-size: 36px;
   line-height: 36px;
@@ -11,4 +30,8 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.promo__button{
+  order: 2;
 }
