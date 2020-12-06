@@ -2,14 +2,20 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
+  .features__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0px 130px;
   }
-  @media (min-width: 1440px) {
-    display: flex;
-    justify-content: space-between;
+}
+
+@media (min-width: 1440px) {
+  .features__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px 88px;
   }
 }
 

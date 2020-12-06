@@ -5,6 +5,37 @@
   font-weight: 400;
 }
 
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  width: 280px;
+  @media (min-width: 768px) {
+    width: 324px;
+  }
+  @media (min-width: 1440px) {
+    width: 245px;
+  }
+}
+
+.catalog__show-all{
+  width: 280px;
+  @media (min-width: 768px) {
+    width: 324px;
+  }
+  @media (min-width: 1440px) {
+    width: 245px;
+  }
+}
+
 .card__title a {
   font-size: 16px;
   line-height: 20px;

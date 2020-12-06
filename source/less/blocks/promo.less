@@ -3,20 +3,19 @@
   flex-direction: column;
 }
 
-.promo__image {
-  width: 280px;
-  height: 270px;
-  order: 1;
-  @media (min-width: 768px) {
-    width: 709px;
-    height: 609px;
-    order: 3;
-  }
-  @media (min-width: 1440px) {
-    width: 552px;
-    height: 499px;
+@media (min-width: 768px) {
+  .promo__wrapper {
+    width: 92%;
+    margin: 0 auto;
   }
 }
+
+@media (min-width: 1440px) {
+  .promo__wrapper {
+    width: 1220px;
+  }
+}
+
 .promo__title {
   font-size: 36px;
   line-height: 36px;
