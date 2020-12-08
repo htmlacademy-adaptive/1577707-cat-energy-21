@@ -34,11 +34,25 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .category-catalog__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
 .category-catalog__text {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: @dark-grey-100;
+}
+
+@media (min-width: 768px) {
+  .category-catalog__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .category-catalog__link {
@@ -49,4 +63,11 @@
   color: @basic-black;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .category-catalog__link {
+    font-size: 20px;
+    line-height: 29px;
+  }
 }

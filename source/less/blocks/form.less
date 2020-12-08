@@ -1,3 +1,29 @@
+// Имя вес возраст
+.form__general-wrap{
+  width: 87%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .form__general-wrap{
+    width: 92%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form__wrap {
+    margin: 0 auto;
+    width: 1220px;
+    display: flex;
+  }
+}
+
+.form__general-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .form__general-item label {
   font-size: 16px;
   line-height: 18px;
@@ -5,6 +31,13 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @dark-grey-100;
+}
+
+@media (min-width: 768px) {
+  .form__general-item label {
+    font-size: 20px;
+    line-height: 29px;
+  }
 }
 
 .form__general-input::placeholder {
@@ -16,6 +49,31 @@
   color: @dark-grey-100;
 }
 
+@media (min-width: 768px) {
+  .form__general-input::placeholder {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+//Похудение
+.form__additionally-wrap {
+  width: 87%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .form__additionally-wrap {
+    width: 92%;
+  }
+}
+
+.form__additionally-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .form__additionally-item label {
   font-size: 16px;
   line-height: 18px;
@@ -24,11 +82,41 @@
   text-transform: uppercase;
 }
 
-.form__legend {
-  font-size: 24px;
-  line-height: 26px;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
+@media (min-width: 768px) {
+  .form__additionally-item label {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+// Контактные данные (владельца кота)
+@media (min-width: 1440px) {
+  .form__details-list {
+    display: flex;
+  }
+}
+
+.form__details-wrap {
+  width: 87%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .form__details-wrap {
+    width: 92%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form__details-wrap {
+    width: 1220px;
+  }
+}
+
+.form__details-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .form__details-item label,
@@ -41,11 +129,45 @@
   color: @dark-grey-100;
 }
 
-.form__comments label {
+@media (min-width: 768px) {
+  .form__details-item label,
+  .form__details-item input {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+.form__title {
   font-size: 24px;
   line-height: 26px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .form__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+// Коментарии
+.form__comments-wrap {
+  width: 87%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .form__comments-wrap {
+    width: 92%;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .form__comments-wrap {
+    width: 1220px;
+  }
 }
 
 .form__comments-text::placeholder {
@@ -57,6 +179,50 @@
   color: @dark-grey-100;
 }
 
+@media (min-width: 768px) {
+  .form__comments-text::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+// Дополнительно
+.form__additional-information-wrap{
+  width: 87%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .form__additional-information-wrap{
+    width: 92%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form__additional-information-wrap{
+    width: 1220px;
+  }
+}
+
+.form__additional-information-list{
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .form__additional-information-list{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form__additional-information-list{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .form__additional-information-item label {
   font-size: 16px;
   line-height: 18px;
@@ -65,9 +231,40 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .form__additional-information-item label {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+.form__post-wrap{
+  width: 87%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .form__post-wrap{
+    width: 92%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form__post-wrap{
+    width: 1220px;
+  }
+}
+
 .form__post-scriptum {
   font-size: 14px;
   line-height: 16px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .form__post-scriptum {
+    font-size: 16 px;
+    line-height: 16px;
+  }
 }
