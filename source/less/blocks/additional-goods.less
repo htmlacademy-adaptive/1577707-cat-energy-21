@@ -5,6 +5,21 @@
   font-weight: 400;
 }
 
+@media (min-width: 1440px) {
+  .additional-goods__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additional-goods__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
 .additional-goods__item-title a {
   font-size: 16px;
   line-height: 16px;
@@ -15,12 +30,26 @@
   color: @basic-black;
 }
 
+@media (min-width: 768px) {
+  .additional-goods__item-title a {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .additional-goods__item table {
   font-size: 14px;
   line-height: 14px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   color: @dark-grey-100;
+}
+
+@media (min-width: 768px) {
+  .additional-goods__item table {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .additional-goods__gift p {

@@ -2,6 +2,13 @@
   background-color: @grey-100;
 }
 
+@media (min-width: 768px) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .footer__location {
   background-color: @basic-white;
 }
@@ -18,6 +25,12 @@
   font-size: 14px;
   line-height: 20px;
   color: @dark-grey-100;
+}
+
+.footer__social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .footer__copyrigh-link {

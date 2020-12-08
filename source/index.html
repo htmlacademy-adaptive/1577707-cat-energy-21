@@ -2,30 +2,33 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page__header header">
+      <div class="header__link">
+        <a class="header__logo"><img src="#"></a>
+        <button class="header__toggle"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="header__navigation navigation">
-        <a class="navigation__logo"><img src="#"></a>
-        <button class="navigation__toggle"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="navigation__wrap">
-          <ul class="navigation__list site-list">
-            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
-            <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-            <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
-          </ul>
-        </div>
+        <ul class="navigation__list site-list">
+          <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+          <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+          <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+        </ul>
       </nav>
     </header>
     <main class="page__main main">
       <section class="promo">
-        <div class="promo__wrapper wrapper">
-          <h1 class="promo__title">Функциональное питание для котов</h1>
-          <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="#">
+        <div class="promo__wrapper">
+          <div class="promo__text">
+            <h1 class="promo__title">Функциональное питание для котов</h1>
+            <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          </div>
           <a href="#" class="promo__button button">Подобрать программу</a>
+          <img class="promo__image" src="#">
         </div>
       </section>
       <section class="category-catalog wrapper">
@@ -66,22 +69,24 @@
           <div class="example__description">
             <h2>Живой пример </h2>
             <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-            <dl class="example__stats">
-              <div>
-                <dt>Снижение веса</dt>
-                <dd>5 Кг</dd>
-              </div>
-              <div>
-                <dt>Снижение веса</dt>
-                <dd>60 Дней</dd>
-              </div>
-            </dl>
-            <table class="example__cost">
-              <tr>
-                <td>Затраты на питание:</td>
-                <td>15 000 Руб.</td>
-              </tr>
-            </table>
+            <div class="example__numbers">
+              <dl class="example__stats">
+                <div>
+                  <dt>Снижение веса</dt>
+                  <dd>5 Кг</dd>
+                </div>
+                <div>
+                  <dt>Снижение веса</dt>
+                  <dd>60 Дней</dd>
+                </div>
+              </dl>
+              <table class="example__cost">
+                <tr>
+                  <td>Затраты на питание:</td>
+                  <td>15 000 Руб.</td>
+                </tr>
+              </table>
+            </div>
           </div>
           <div class="example__weight-loss">
             <div class="example__weight-image">
@@ -91,7 +96,7 @@
             <div class="example__weight-range">
               <button class="example__weight-button" type="button">Было</button>
               <div class="example__weight-scale">
-                <div class="example__weight-toggle" tabindex="0"></div>
+                <button class="example__weight-toggle" tabindex="0"></button>
               </div>
               <button class="example__weight-button" type="button">Стало</button>
             </div>

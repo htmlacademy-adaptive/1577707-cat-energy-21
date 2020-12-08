@@ -5,6 +5,57 @@
   font-weight: 400;
 }
 
+@media (min-width: 768px) {
+  .main__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1440px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 324px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    width: 245px;
+  }
+}
+
+.catalog__show-all{
+  width: 280px;
+  @media (min-width: 768px) {
+    width: 324px;
+  }
+  @media (min-width: 1440px) {
+    width: 245px;
+  }
+}
+
 .card__title a {
   font-size: 16px;
   line-height: 20px;
@@ -15,13 +66,34 @@
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .card__title a {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card__title a {
+    line-height: 21px;
+  }
+}
+
 .card__specifications th,
 .card__specifications td {
   font-size: 12px;
-  line-height: 20px;
+  line-height: 16px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   color: @dark-grey-100;
+}
+
+@media (min-width: 768px) {
+  .card__specifications th,
+  .card__specifications td {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .catalog__show-title {
@@ -31,12 +103,26 @@
   font-weight: 400;
 }
 
+@media (min-width: 768px) {
+  .catalog__show-title {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
 .catalog__show-text {
   font-size: 12px;
   line-height: 16px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   color: @dark-grey-100;
+}
+
+@media (min-width: 768px) {
+  .catalog__show-text {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .catalog__show-button {

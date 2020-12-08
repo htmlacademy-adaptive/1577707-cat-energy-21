@@ -1,8 +1,33 @@
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .promo__wrapper {
+    width: 92%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .promo__wrapper {
+    width: 1220px;
+  }
+}
+
 .promo__title {
   font-size: 36px;
   line-height: 36px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .promo__slogan {
@@ -11,4 +36,15 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.promo__button{
+  order: 2;
 }
