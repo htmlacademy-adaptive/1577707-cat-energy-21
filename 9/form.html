@@ -22,51 +22,47 @@
       </nav>
     </header>
     <main class="page__main main">
-      <section class="selection wrapper">
-        <h1 class="selection__title">Подбор программы</h1>
-        <p class="selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      </section>
+      <div class="main__selection wrapper">
+        <h1 class="main__selection-title">Подбор программы</h1>
+        <p class="main__selection-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <section class="form">
         <h2 class="visually-hidden">Форма программы</h2>
         <form class="form__program" method="GET" action="https://echo.htmlacademy.ru">
           <div class="form__wrap">
             <fieldset>
-              <div class="form__general-wrap">
-                <h2 class="visually-hidden">Параметры кота</h2>
-                <ul class="form__general-list">
-                  <li class="form__general-item">
-                    <label for="name">Имя:*</label>
-                    <input class="form__general-input" type="text" id="name" name="name" placeholder="Барсик">
-                  </li>
-                  <li class="form__general-item">
-                    <label for="weight">Вес (кг):*</label>
-                    <input class="form__general-input" type="number" id="weight" name="weight" placeholder="7">
-                  </li>
-                  <li class="form__general-item">
-                    <label for="age">Возраст (лет):*</label>
-                    <input class="form__general-input" type="number" id="age" name="age" placeholder="7">
-                  </li>
-                </ul>
-              </div>
+              <legend class="visually-hidden">Параметры кота</legend>
+              <ul class="form__general-list">
+                <li class="form__general-item">
+                  <label for="name">Имя:*</label>
+                  <input class="form__general-input" type="text" id="name" name="name" placeholder="Барсик">
+                </li>
+                <li class="form__general-item">
+                  <label for="weight">Вес (кг):*</label>
+                  <input class="form__general-input" type="number" id="weight" name="weight" placeholder="7">
+                </li>
+                <li class="form__general-item">
+                  <label for="age">Возраст (лет):*</label>
+                  <input class="form__general-input" type="number" id="age" name="age" placeholder="7">
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="form__additionally">
-              <div class="form__additionally-wrap">
-                <h2 class="visually-hidden">Выбор программы</h2>
-                <ul class="form__additionally-list">
-                  <li class="form__additionally-item">
-                    <input class="visually-hidden form__radio" type="radio" id="slimming" name="cat-needs" value="Похудение">
-                    <label for="slimming">Похудение</label>
-                  </li>
-                  <li class="form__additionally-item">
-                    <input class="visually-hidden form__radio" type="radio" id="Weight gain" name="cat-needs" value="Набор массы">
-                    <label for="Weight gain">Набор массы</label>
-                  </li>
-                  <li class="form__additionally-item">
-                    <input class="visually-hidden form__radio" type="radio" id="not-know" name="cat-needs" value="Не знаю (нужен ваш совет)">
-                    <label for="not-know">Не знаю (нужен ваш совет)</label>
-                  </li>
-                </ul>
-              </div>
+              <legend class="visually-hidden">Выбор программы</legend>
+              <ul class="form__additionally-list">
+                <li class="form__additionally-item">
+                  <input class="visually-hidden form__radio" type="radio" id="slimming" name="cat-needs" value="Похудение">
+                  <label for="slimming">Похудение</label>
+                </li>
+                <li class="form__additionally-item">
+                  <input class="visually-hidden form__radio" type="radio" id="Weight gain" name="cat-needs" value="Набор массы">
+                  <label for="Weight gain">Набор массы</label>
+                </li>
+                <li class="form__additionally-item">
+                  <input class="visually-hidden form__radio" type="radio" id="not-know" name="cat-needs" value="Не знаю (нужен ваш совет)">
+                  <label for="not-know">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
             </fieldset>
           </div>
           <fieldset class="form__details">
@@ -86,8 +82,8 @@
           </fieldset>
           <div class="form__comments">
             <div class="form__comments-wrap">
-              <h2 class="form__title">Комментарий</h2>
-              <textarea class="form__comments-text" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <label class="form__title" for="comments-text">Комментарий</label>
+              <textarea class="form__comments-text" id="comments-text" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </div>
           <fieldset>
