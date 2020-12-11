@@ -32,7 +32,18 @@
 @media (min-width: 768px) {
   .site-list {
     display: flex;
-    flex-wrap: wrap;
-    text-align: left;
+    justify-content: space-between;
+  }
+
+  .site-list__item:not(:nth-child(3)) {
+    margin-right: 33px;
+  }
+
+  .site-list__item:nth-child(1) {
+    margin-right: 7.5%;
+  }
+
+  .site-list__item:nth-child(2) {
+    margin-right: 7.9%;
   }
 }
