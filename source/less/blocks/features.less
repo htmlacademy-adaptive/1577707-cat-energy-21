@@ -2,20 +2,24 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 46px;
 }
 
 @media (min-width: 768px) {
   .features__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0px 130px;
+    padding-top: 72px;
+    padding-bottom: 104px;
   }
 }
 
 @media (min-width: 1440px) {
   .features__list {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px 88px;
+    grid-column-gap: 94px;
   }
 }
 
@@ -24,25 +28,107 @@
   line-height: 40px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-top: 27px;
 }
 
 @media (min-width: 768px) {
   .features__title {
     font-size: 60px;
     line-height: 60px;
+    margin-top: 45px;
   }
 }
 
 .features__item {
+  position: relative;
+  width: 280px;
+  box-sizing: border-box;
+  padding-left: 80px;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: @dark-grey-100;
+  margin-top: 20px;
+}
+
+.features__item::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  left: 0;
+  top: 0;
+}
+
+.features__item:nth-child(1)::after {
+  background-image: url('../img/block1.png');
+}
+
+.features__item:nth-child(2)::after {
+  background-image: url('../img/block2.png');
+}
+
+.features__item:nth-child(3)::after {
+  background-image: url('../img/block3.png');
+}
+
+.features__item:nth-child(4)::after {
+  background-image: url('../img/block4.png');
+}
+
+@media (min-width: 768px) {
+  .features__item {
+    width: 230px;
+    padding-left: 0;
+    padding-top: 113px;
+    margin-right: 23%;
+  }
+
+  .features__item:nth-child(2n) {
+    margin-right: 11%;
+  }
+
+  .features__item:not(:nth-child(1)) {
+    margin-top: 134px;
+  }
+
+  .features__item:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .features__item:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .features__item::after {
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+  }
 }
 
 @media (min-width: 768px) {
   .features__item {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .features__item {
+    padding-top: 114px;
+    margin-right: 0;
+  }
+
+  .features__item:not(:nth-child(1)) {
+    margin-top: 0;
+  }
+
+  .features__item:nth-child(2n) {
+    margin-right: 0;
   }
 }

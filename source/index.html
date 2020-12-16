@@ -9,8 +9,9 @@
   <body class="page__body">
     <header class="page__header header">
       <div class="header__link">
-        <a class="header__logo"><img src="#"></a>
-        <button class="header__toggle"><span class="visually-hidden">Открыть меню</span></button>
+        <a class="header__logo"><img src="#" width="33" height="37"></a>
+        <img class="header__logo-text" src="../img/logo-2.png" width="101" height="18">
+        <button id="toggle" class="header__toggle"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <nav class="header__navigation navigation">
         <ul class="navigation__list site-list">
@@ -23,13 +24,14 @@
     <main class="page__main main">
       <section class="promo">
         <div class="promo__wrapper">
-          <div class="promo__text">
+          <div class="promo__text wrapper">
             <h1 class="promo__title">Функциональное питание для котов</h1>
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
           </div>
           <a href="#" class="promo__button button">Подобрать программу</a>
-          <img class="promo__image" src="#">
+          <img class="promo__image" src="/img/index-can-mobile 1.png" width="280px" height="270px">
         </div>
+        <div class="desctop"></div>
       </section>
       <section class="category-catalog wrapper">
         <h2 class="visually-hidden">Каталог товаров</h2>
@@ -72,11 +74,11 @@
             <div class="example__numbers">
               <dl class="example__stats">
                 <div>
-                  <dt>Снижение веса</dt>
+                  <dt>снижение веса</dt>
                   <dd>5 Кг</dd>
                 </div>
                 <div>
-                  <dt>Снижение веса</dt>
+                  <dt>затрачено времени</dt>
                   <dd>60 Дней</dd>
                 </div>
               </dl>
@@ -105,14 +107,14 @@
       </section>
     </main>
     <footer class="page__footer footer">
-      <section class="footer__location wrapper">
+      <section class="footer__location">
         <h2 class="visually-hidden">Наше местоположение</h2>
         <div class="footer__address">
           <h2>приглашаем к сотрудничеству дилеров!</h2>
           <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
       </section>
-      <img src="#">
+      <img src="/img/map.png" width="100%">
       <div class="footer__wrapper wrapper">
         <a class="footer__logo"><img src="#"></a>
         <ul class="footer__social social">
@@ -121,10 +123,20 @@
           <li class="social__item"><a href="#"><span class="visually-hidden">Фейсбуке</span></a></li>
         </ul>
         <a class="footer__copyrigh-link" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
+          <p>HTML Academy</p>
           <img src="#">
         </a>
       </div>
     </footer>
+    <script>
+      document.querySelector('.header__toggle').onclick = function(){
+        this.classList.toggle('open-toggle');
+      }
+      let $btn = document.getElementById('toggle');
+      let $nav = document.querySelector('.site-list');
+      $btn.addEventListener('click', function() {
+          $nav.classList.toggle('site-list-open');
+      });
+    </script>
   </body>
 </html>
