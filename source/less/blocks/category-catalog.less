@@ -1,3 +1,13 @@
+.category-catalog {
+  margin-top: 22px;
+}
+
+@media (min-width: 768px) {
+  .category-catalog__list {
+    margin: 0;
+  }
+}
+
 .category-catalog__list {
   margin: 0;
   padding: 0;
@@ -26,6 +36,10 @@
   box-sizing: border-box;
 }
 
+.category-catalog__item:nth-child(1) {
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   .category-catalog__item {
     width: 100%;
@@ -34,6 +48,7 @@
     padding-bottom: 57px;
     padding-left: 52px;
   }
+
   .category-catalog__item:first-child {
     margin-top: 0;
   }
@@ -54,7 +69,7 @@
   width: 50px;
   height: 53px;
   left: 6.2%;
-  background-image: url('../img/cat-back.svg');
+  background-image: url("../img/cat-back.svg");
   background-repeat: no-repeat;
 }
 
@@ -64,7 +79,7 @@
   width: 67px;
   height: 50px;
   left: 4.2%;
-  background-image: url('../img/cat-beck.svg');
+  background-image: url("../img/cat-beck.svg");
   background-repeat: no-repeat;
 }
 
@@ -73,14 +88,14 @@
     width: 200px;
     height: 211px;
     left: 55%;
-    background-image: url('../img/cat-back-tablet.svg');
+    background-image: url("../img/cat-back-tablet.svg");
   }
 
   .category-catalog__item--pro::before {
     width: 268px;
     height: 200px;
     left: 51%;
-    background-image: url('../img/cat-beck-tablet.svg');
+    background-image: url("../img/cat-beck-tablet.svg");
   }
 }
 
@@ -90,7 +105,7 @@
     height: 100px;
     left: 54px;
     top: 47px;
-    background-image: url('../img/cat-back-descrop.svg');
+    background-image: url("../img/cat-back-descrop.svg");
   }
 
   .category-catalog__item--pro::before {
@@ -98,7 +113,7 @@
     height: 100px;
     left: 33px;
     top: 47px;
-    background-image: url('../img/cat-beck-desctop.svg');
+    background-image: url("../img/cat-beck-desctop.svg");
   }
 }
 
@@ -170,6 +185,19 @@
   text-decoration: none;
   text-transform: uppercase;
   margin-top: 19px;
+  padding-right: 40px;
+}
+
+@media (min-width: 768px) {
+  .category-catalog__link {
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .category-catalog__link {
+    padding-right: 58px;
+  }
 }
 
 .category-catalog__link::before {
@@ -177,9 +205,10 @@
   position: absolute;
   width: 32px;
   height: 10px;
-  right: -49px;
+  right: 0;
   top: 5px;
   background-image: url('../img/srech-right.svg');
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {

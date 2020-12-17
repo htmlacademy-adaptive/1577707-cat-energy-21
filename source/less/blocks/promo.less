@@ -2,16 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-image: url(../img/index-background.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: auto;
-}
-
-@media (min-width: 768px) {
-  .promo__wrapper {
-    background-image: none;
-  }
 }
 
 @media (min-width: 1440px) {
@@ -36,7 +26,7 @@
     width: 50%;
     height: 100%;
     right: 0;
-    background-image: url('../img/index-background-desktop 1.jpg');
+    background-image: url("../img/index-background-desktop 1.jpg");
     background-position: left center;
     background-repeat: no-repeat;
     top: 0;
@@ -44,16 +34,20 @@
   }
 }
 
-.promo__text{
-  max-width: 389px;
-  margin: 0 auto;
+.promo__text {
+  position: relative;
+  min-height: 280px;
   text-align: center;
   color: @basic-white;
-  z-index: 1;
+  background: url("../img/promo-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 65% 0;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
-  .promo__text{
+  .promo__text {
+    background-image: none;
     color: @basic-black;
     text-align: left;
     width: 92%;
@@ -63,7 +57,7 @@
 }
 
 @media (min-width: 1440px) {
-  .promo__text{
+  .promo__text {
     width: 494px;
     margin: 0;
     margin-left: 80px;
@@ -74,7 +68,8 @@
   width: 280px;
   height: 270px;
   margin: 0 auto;
-  margin-top: 29px;
+  margin-top: -110px;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -103,13 +98,15 @@
   line-height: 36px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
-  margin: 0;
   padding: 0;
+  margin: 0 auto;
   margin-top: 27px;
+  max-width: 389px;
 }
 
 @media (min-width: 768px) {
   .promo__title {
+    margin: 0;
     font-size: 60px;
     line-height: 60px;
     width: 420px;
@@ -147,9 +144,12 @@
   order: 2;
   display: block;
   width: 280px;
+  box-sizing: border-box;
   margin: 0 auto;
   padding-top: 7px;
   padding-bottom: 7px;
+  padding-left: 44px;
+  padding-right: 44px;
   text-align: center;
   font-size: 14px;
   line-height: 18px;
@@ -161,10 +161,12 @@
     margin-left: 82px;
     padding-top: 14px;
     padding-bottom: 14px;
-    width: 244px;
+    padding-left: 26px;
+    padding-right: 26px;
     z-index: 1;
     font-size: 20px;
     line-height: 20px;
+    box-sizing: border-box;
   }
 }
 

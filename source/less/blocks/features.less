@@ -1,10 +1,27 @@
+.features {
+  margin-top: 27px;
+}
+
+@media (min-width: 768px) {
+  .features {
+    margin-top: 45px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .features {
+    margin-top: 71px;
+  }
+}
+
 .features__list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 10px;
+  justify-content: space-between;
+  padding-top: 38px;
   padding-bottom: 46px;
 }
 
@@ -30,20 +47,17 @@
   font-weight: 400;
   margin: 0;
   padding: 0;
-  margin-top: 27px;
 }
 
 @media (min-width: 768px) {
   .features__title {
     font-size: 60px;
     line-height: 60px;
-    margin-top: 45px;
   }
 }
 
 .features__item {
   position: relative;
-  width: 280px;
   box-sizing: border-box;
   padding-left: 80px;
   font-size: 14px;
@@ -51,6 +65,13 @@
   font-weight: 400;
   color: @dark-grey-100;
   margin-top: 20px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.features__item:nth-child(1) {
+  margin-top: 0;
 }
 
 .features__item::after {
@@ -60,26 +81,47 @@
   height: 60px;
   left: 0;
   top: 0;
-}
-
-.features__item:nth-child(1)::after {
-  background-image: url('../img/block1.png');
-}
-
-.features__item:nth-child(2)::after {
-  background-image: url('../img/block2.png');
-}
-
-.features__item:nth-child(3)::after {
-  background-image: url('../img/block3.png');
-}
-
-.features__item:nth-child(4)::after {
-  background-image: url('../img/block4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
+  .features__item::after {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__item:nth-child(1)::after {
+  background-image: url("../img/block1.png");
+}
+
+.features__item:nth-child(2)::after {
+  background-image: url("../img/block2.png");
+}
+
+.features__item:nth-child(3)::after {
+  background-image: url("../img/block3.png");
+}
+
+.features__item:nth-child(4)::after {
+  background-image: url("../img/block4.png");
+}
+
+@media (min-width: 650px) {
   .features__item {
+    width: 280px;
+  }
+
+  .features__item:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .features__item {
+    align-items: baseline;
     width: 230px;
     padding-left: 0;
     padding-top: 113px;

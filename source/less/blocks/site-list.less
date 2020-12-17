@@ -6,6 +6,9 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -14,6 +17,7 @@
     font-size: 18px;
     line-height: 24px;
     text-transform: uppercase;
+    padding: 0;
   }
 }
 
@@ -36,8 +40,6 @@
 }
 
 .site-list__item {
-  padding-top: 22px;
-  padding-bottom: 24px;
   border-top: 1px solid @grey-500;
 }
 
@@ -67,7 +69,7 @@
     border: none;
   }
 
-  .site-list__item--active::before {
+  .site-list__item--active a::before {
     position: absolute;
     content: "";
     width: 100%;
