@@ -18,6 +18,7 @@
           <li class="site-list__item site-list__item--active"><a>Главная</a></li>
           <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
           <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+
         </ul>
       </nav>
     </header>
@@ -144,14 +145,14 @@
           </ul>
         </div>
         <a class="footer__copyrigh-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <p>HTML Academy</p>
+          <span>HTML Academy</span>
           <img src="/img/logo-academy.png">
         </a>
       </div>
     </footer>
     <script>
       document.querySelector('.header__toggle').onclick = function(){
-        this.classList.toggle('open-toggle');
+        this.classList.toggle('open-site-list');
       }
       let $btn = document.getElementById('toggle');
       let $nav = document.querySelector('.site-list');
