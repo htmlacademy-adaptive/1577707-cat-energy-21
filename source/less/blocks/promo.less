@@ -39,10 +39,12 @@
   min-height: 280px;
   text-align: center;
   color: @basic-white;
-  background: url("../img/promo-mobile.png");
+  background-color: @basic-white;
+  background-image: url("../img/promo-mobile.png");
   background-repeat: no-repeat;
   background-position: 65% 0;
   background-size: cover;
+  padding-top: 27px;
 }
 
 @media (min-width: 768px) {
@@ -51,8 +53,10 @@
     color: @basic-black;
     text-align: left;
     width: 92%;
+    min-height: auto;
     margin: 0 auto;
     margin-left: 87px;
+    padding-top: 62px;
   }
 }
 
@@ -100,8 +104,7 @@
   font-weight: 400;
   padding: 0;
   margin: 0 auto;
-  margin-top: 27px;
-  max-width: 389px;
+  width: 389px;
 }
 
 @media (min-width: 768px) {
@@ -110,14 +113,12 @@
     font-size: 60px;
     line-height: 60px;
     width: 420px;
-    margin-top: 62px;
   }
 }
 
 @media (min-width: 768px) {
   .promo__title {
     margin: 0;
-    margin-top: 114px;
   }
 }
 
@@ -148,8 +149,8 @@
   margin: 0 auto;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-left: 44px;
-  padding-right: 44px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   font-size: 14px;
   line-height: 18px;
@@ -157,12 +158,11 @@
 
 @media (min-width: 768px) {
   .promo__button {
+    width: 244px;
     margin-top: 49px;
     margin-left: 82px;
     padding-top: 14px;
     padding-bottom: 14px;
-    padding-left: 26px;
-    padding-right: 26px;
     z-index: 1;
     font-size: 20px;
     line-height: 20px;

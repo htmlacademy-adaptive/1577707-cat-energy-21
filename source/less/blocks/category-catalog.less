@@ -65,6 +65,7 @@
 
 .category-catalog__item--slim::before {
   position: absolute;
+  display: block;
   content: "";
   width: 50px;
   height: 53px;
@@ -75,6 +76,7 @@
 
 .category-catalog__item--pro::before {
   position: absolute;
+  display: block;
   content: "";
   width: 67px;
   height: 50px;
@@ -85,35 +87,45 @@
 
 @media (min-width: 768px) {
   .category-catalog__item--slim::before {
+    display: block;
     width: 200px;
     height: 211px;
-    left: 55%;
+    left: unset;
+    right: 9%;
     background-image: url("../img/cat-back-tablet.svg");
+    background-repeat: no-repeat;
   }
 
   .category-catalog__item--pro::before {
+    display: block;
     width: 268px;
     height: 200px;
-    left: 51%;
+    left: unset;
+    right: 4%;
     background-image: url("../img/cat-beck-tablet.svg");
+    background-repeat: no-repeat;
   }
 }
 
 @media (min-width: 1440px) {
   .category-catalog__item--slim::before {
+    display: block;
     width: 100px;
     height: 100px;
     left: 54px;
     top: 47px;
     background-image: url("../img/cat-back-descrop.svg");
+    background-repeat: no-repeat;
   }
 
   .category-catalog__item--pro::before {
+    display: block;
     width: 134px;
     height: 100px;
     left: 33px;
     top: 47px;
     background-image: url("../img/cat-beck-desctop.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -159,7 +171,7 @@
   .category-catalog__text {
     font-size: 16px;
     line-height: 24px;
-    width: 48%;
+    width: 53%;
     margin-bottom: 52px;
     margin-top: 24px;
     padding-bottom: 0;
@@ -201,6 +213,7 @@
 }
 
 .category-catalog__link::before {
+  display: block;
   content: "";
   position: absolute;
   width: 32px;

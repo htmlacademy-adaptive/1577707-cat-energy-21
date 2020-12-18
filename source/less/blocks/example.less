@@ -1,9 +1,11 @@
 .example__wrapper {
+  padding-top: 27px;
   padding-bottom: 31px;
 }
 
 @media (min-width: 769px) {
   .example__wrapper {
+    padding-top: 43p;
     padding-bottom: 64px;
   }
 }
@@ -12,6 +14,7 @@
   .example__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 58px;
     padding-bottom: 75px;
   }
 }
@@ -28,19 +31,6 @@
   font-weight: 400;
   margin: 0;
   padding: 0;
-  margin-top: 27px;
-}
-
-@media (min-width: 768px) {
-  .example__description h2 {
-    margin-top: 43px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .example__description h2 {
-    margin-top: 58px;
-  }
 }
 
 .example__description p {
@@ -55,7 +45,6 @@
 @media (min-width: 768px) {
   .example__description p {
     margin-top: 63px;
-    width: 708px;
   }
 }
 
@@ -110,6 +99,7 @@
 }
 
 .example__stats dt {
+  position: relative;
   font-size: 12px;
   line-height: 12px;
   color: @dark-grey-100;
