@@ -76,20 +76,20 @@
   left: 0;
 }
 
-.open-site-list.header__toggle {
+.header__toggle--opened.header__toggle {
   position: relative;
   width: 24px;
   height: 24px;
   background-image: none;
 }
 
-.open-site-list.header__toggle::before {
+.header__toggle--opened.header__toggle::before {
   transform: rotate(-45deg);
   top: 11px;
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
 }
 
-.open-site-list.header__toggle::after {
+.header__toggle--opened.header__toggle::after {
   transform: rotate(45deg);
   top: 11px;
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
