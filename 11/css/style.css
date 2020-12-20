@@ -67,6 +67,7 @@ img {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   box-sizing: border-box;
+  position: relative;
 }
 @media (min-width: 768px) {
   .page__header {
@@ -144,18 +145,18 @@ img {
   top: 0;
   left: 0;
 }
-.open-site-list.header__toggle {
+.header__toggle--opened.header__toggle {
   position: relative;
   width: 24px;
   height: 24px;
   background-image: none;
 }
-.open-site-list.header__toggle::before {
+.header__toggle--opened.header__toggle::before {
   transform: rotate(-45deg);
   top: 11px;
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
 }
-.open-site-list.header__toggle::after {
+.header__toggle--opened.header__toggle::after {
   transform: rotate(45deg);
   top: 11px;
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
@@ -238,7 +239,7 @@ img {
   text-align: center;
   display: none;
 }
-.site-list-open {
+.site-list--opened {
   display: block;
 }
 .site-list__item {
@@ -299,22 +300,18 @@ img {
   }
 }
 @media (min-width: 1440px) {
-  .promo {
-    position: relative;
-    margin-top: -100px;
-    padding-top: 100px;
-  }
   .promo::before {
     position: absolute;
     content: "";
     margin: 0 auto;
     width: 50%;
-    height: 100%;
+    height: 696px;
     right: 0;
-    background-image: url("../img/index-background-desktop 1.jpg");
-    background-position: left center;
+    background-image: url("../img/desctop-fon.png");
+    background-position: 10% center;
     background-repeat: no-repeat;
-    top: 0;
+    background-size: cover;
+    top: 0px;
     z-index: -1;
   }
 }
@@ -323,23 +320,27 @@ img {
   min-height: 280px;
   text-align: center;
   color: #ffffff;
-  background-color: #ffffff;
+  background-color: #68B738;
   background-image: url("../img/promo-mobile.png");
   background-repeat: no-repeat;
   background-position: 65% 0;
   background-size: cover;
   padding-top: 27px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
 }
 @media (min-width: 768px) {
   .promo__text {
+    background-color: #ffffff;
     background-image: none;
     color: #000000;
     text-align: left;
-    width: 92%;
+    width: auto;
     min-height: auto;
     margin: 0 auto;
     margin-left: 87px;
     padding-top: 62px;
+    padding-bottom: 0px;
   }
 }
 @media (min-width: 1440px) {
@@ -355,6 +356,7 @@ img {
   margin: 0 auto;
   margin-top: -110px;
   z-index: 1;
+  position: relative;
 }
 @media (min-width: 768px) {
   .promo__image {
@@ -531,7 +533,7 @@ img {
     width: 200px;
     height: 211px;
     left: unset;
-    right: 9%;
+    right: 5%;
     background-image: url("../img/cat-back-tablet.svg");
     background-repeat: no-repeat;
   }
@@ -679,12 +681,12 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 38px;
+  margin-top: 38px;
   padding-bottom: 46px;
 }
 @media (min-width: 768px) {
   .features__list {
-    padding-top: 72px;
+    margin-top: 72px;
     padding-bottom: 104px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -774,6 +776,7 @@ img {
     align-items: baseline;
     padding-left: 0;
     padding-top: 113px;
+    width: auto;
   }
   .features__item::after {
     width: 80px;
@@ -996,6 +999,9 @@ img {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+  background-color: inherit;
+  border: none;
+  outline: none;
 }
 .footer {
   background-color: #F2F2F2;
@@ -1112,6 +1118,8 @@ img {
 @media (min-width: 768px) {
   .social {
     margin: 0;
+    width: auto;
+    flex-shrink: 0;
   }
 }
 .social__item {
