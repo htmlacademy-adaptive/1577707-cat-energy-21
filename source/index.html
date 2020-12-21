@@ -10,10 +10,10 @@
     <header class="page__header header">
       <div class="header__link">
         <a class="header__logo"><img src="#" width="33" height="37"></a>
-        <button id="toggle" class="header__toggle"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="header__toggle"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <nav class="header__navigation navigation">
-        <ul class="navigation__list site-list">
+        <ul class="navigation__list site-list site-list--nojs">
           <li class="site-list__item site-list__item--active"><a>Главная</a></li>
           <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
           <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
@@ -28,7 +28,7 @@
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
           </div>
           <a href="#" class="promo__button button">Подобрать программу</a>
-          <img class="promo__image" src="/img/index-can-mobile 1.png" width="280px" height="270px">
+          <img class="promo__image" src="img/index-can-mobile 1.png" width="280px" height="270px">
         </div>
       </section>
       <section class="category-catalog wrapper">
@@ -112,9 +112,9 @@
           <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
       </section>
-      <img src="/img/map.png" width="100%">
+      <img src="img/map.png" width="100%">
       <div class="footer__wrapper wrapper">
-        <a class="footer__logo"><img src="/img/footer-logo.png"></a>
+        <a class="footer__logo"><img src="img/footer-logo.png"></a>
         <ul class="footer__social social">
           <li class="social__item">
             <a href="#">
@@ -149,13 +149,11 @@
     <script>
       const btn = document.querySelector('.header__toggle');
       let nav = document.querySelector('.site-list');
-
-      toggle.addEventListener('click', function() {
-        this.classList.toggle('header__toggle--opened');
-      });
+      nav.classList.remove('site-list--nojs');
 
       btn.addEventListener('click', function() {
-          nav.classList.toggle('site-list--opened');
+        this.classList.toggle('header__toggle--opened');
+        nav.classList.toggle('site-list--opened');
       });
     </script>
   </body>
