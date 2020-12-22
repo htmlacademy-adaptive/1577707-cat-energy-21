@@ -1,3 +1,13 @@
+.category-catalog {
+  margin-top: 22px;
+}
+
+@media (min-width: 768px) {
+  .category-catalog__list {
+    margin: 0;
+  }
+}
+
 .category-catalog__list {
   margin: 0;
   padding: 0;
@@ -9,21 +19,114 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 82px;
   }
 }
 
 .category-catalog__item {
-  width: 100%;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: @grey-100;
+  margin-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 33px;
+  box-sizing: border-box;
+}
+
+.category-catalog__item:nth-child(1) {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .category-catalog__item {
+    width: 100%;
+    padding-top: 77px;
+    padding-bottom: 57px;
+    padding-left: 52px;
+    padding-right: 40%;
+  }
+
+  .category-catalog__item:first-child {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 1440px) {
   .category-catalog__item {
+    margin: 0;
     width: 570px;
+    padding-bottom: 59px;
+    padding-right: 51px;
   }
 }
 
-.category-catalog__item {
-  background-color: @grey-100;
+.category-catalog__item--slim::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 50px;
+  height: 53px;
+  left: 6.2%;
+  background-image: url("../img/cat-back.svg");
+  background-repeat: no-repeat;
+}
+
+.category-catalog__item--pro::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 67px;
+  height: 50px;
+  left: 4.2%;
+  background-image: url("../img/cat-beck.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .category-catalog__item--slim::before {
+    display: block;
+    width: 200px;
+    height: 211px;
+    left: unset;
+    right: 5%;
+    background-image: url("../img/cat-back-tablet.svg");
+    background-repeat: no-repeat;
+  }
+
+  .category-catalog__item--pro::before {
+    display: block;
+    width: 268px;
+    height: 200px;
+    left: unset;
+    right: 4%;
+    background-image: url("../img/cat-beck-tablet.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 1440px) {
+  .category-catalog__item--slim::before {
+    display: block;
+    width: 100px;
+    height: 100px;
+    left: 54px;
+    top: 47px;
+    background-image: url("../img/cat-back-descrop.svg");
+    background-repeat: no-repeat;
+  }
+
+  .category-catalog__item--pro::before {
+    display: block;
+    width: 134px;
+    height: 100px;
+    left: 33px;
+    top: 47px;
+    background-image: url("../img/cat-beck-desctop.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .category-catalog__title {
@@ -32,12 +135,22 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0;
+  margin-left: 31%;
 }
 
 @media (min-width: 768px) {
   .category-catalog__title {
+    margin: 0;
     font-size: 36px;
     line-height: 36px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .category-catalog__title {
+    margin-left: 162px;
   }
 }
 
@@ -46,16 +159,36 @@
   line-height: 18px;
   font-weight: 400;
   color: @dark-grey-100;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 23px;
+  margin-bottom: 19px;
+  margin-top: 29px;
+  border-bottom: 1px solid @grey-600;
 }
 
 @media (min-width: 768px) {
   .category-catalog__text {
     font-size: 16px;
     line-height: 24px;
+    width: auto;
+    margin-bottom: 52px;
+    margin-top: 24px;
+    padding-bottom: 0;
+    border: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .category-catalog__text {
+    width: 100%;
+    margin-bottom: 27px;
+    margin-top: 73px;
   }
 }
 
 .category-catalog__link {
+  position: relative;
   font-size: 16px;
   line-height: 16px;
   font-family: "Oswald", "Arial", sans-serif;
@@ -63,11 +196,41 @@
   color: @basic-black;
   text-decoration: none;
   text-transform: uppercase;
+  margin-top: 19px;
+  padding-right: 40px;
+}
+
+@media (min-width: 768px) {
+  .category-catalog__link {
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .category-catalog__link {
+    padding-right: 58px;
+  }
+}
+
+.category-catalog__link::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 10px;
+  right: 0;
+  top: 5px;
+  background-image: url('../img/srech-right.svg');
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
   .category-catalog__link {
     font-size: 20px;
     line-height: 29px;
+  }
+
+  .category-catalog__link::before {
+    top: 10px;
   }
 }
