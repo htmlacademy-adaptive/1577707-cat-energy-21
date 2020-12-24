@@ -10,7 +10,7 @@
     <header class="page__header header">
       <div class="header__link">
         <a class="header__logo"><img src="#" width="33" height="37"></a>
-        <button class="header__toggle"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="header__toggle header__toggle--nojs"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <nav class="header__navigation navigation">
         <ul class="navigation__list site-list site-list--nojs">
@@ -148,8 +148,9 @@
     </footer>
     <script>
       const btn = document.querySelector('.header__toggle');
-      let nav = document.querySelector('.site-list');
+      const nav = document.querySelector('.site-list');
       nav.classList.remove('site-list--nojs');
+      btn.classList.remove('header__toggle--nojs');
 
       btn.addEventListener('click', function() {
         this.classList.toggle('header__toggle--opened');
