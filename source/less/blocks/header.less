@@ -2,12 +2,26 @@
   position: relative;
 }
 
+.header::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: @grey-600;
+  bottom: 0;
+}
+
 @media (min-width: 768px) {
   .header {
     margin: 0 auto;
     width: 92%;
     display: flex;
     margin-top: 24px;
+  }
+
+  .header::before {
+    display: none;
   }
 }
 
@@ -50,6 +64,10 @@
   outline: none;
   display: block;
   cursor: pointer;
+}
+
+.header__toggle--nojs {
+  display: none;
 }
 
 .header__toggle::before {
