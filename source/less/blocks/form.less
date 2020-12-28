@@ -33,12 +33,15 @@
 @media (min-width: 768px) {
   .form__general-list {
     width: 92%;
+    padding-left: 40px;
+    box-sizing: border-box;
   }
 }
 
 @media (min-width: 1440px) {
   .form__general-list {
     width: 570px;
+    padding-left: 0;
   }
 }
 
@@ -115,8 +118,19 @@
   width: 100%;
   border: 1px solid @grey-310;
   outline: none;
-  -moz-appearance: textfield;
   height: 45px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.form__general-item input::-webkit-outer-spin-button,
+.form__general-item input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.form__general-item input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 @media (min-width: 768px) {
@@ -176,8 +190,9 @@
     width: 92%;
     margin: 0 auto;
     margin-top: 72px;
-    padding-right: 38px;
     box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 38px;
   }
 
   .form__additionally::before {
@@ -193,6 +208,9 @@
   .form__additionally {
     padding: 0;
     margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 570px;
   }
 }
 
@@ -209,20 +227,20 @@
   .form__additionally-list {
     width: 100%;
     border: 1px solid @grey-310;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
 @media (min-width: 1440px) {
   .form__additionally-list {
     width: 570px;
-    margin-right: 0;
+    margin: 0;
   }
 }
 
 .form__additionally-item:not(:nth-child(1)) {
-  margin-top: 23px;
+  margin-top: 13px;
 }
 
 .form__additionally-item label {
@@ -235,6 +253,7 @@
   padding-left: 45px;
   padding-top: 4px;
   padding-bottom: 4px;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -242,6 +261,7 @@
     font-size: 20px;
     line-height: 29px;
     padding-left: 85px;
+    padding-top: 5px;
     padding-bottom: 5px;
   }
 }
@@ -308,7 +328,7 @@
   height: 2px;
   top: 16px;
   right: 0;
-  background-color: green;
+  background-color: @green;
   z-index: -1;
 }
 
@@ -345,12 +365,15 @@
 @media (min-width: 768px) {
   .form__details-wrap {
     width: 92%;
+    padding-left: 40px;
+    box-sizing: border-box;
   }
 }
 
 @media (min-width: 1440px) {
   .form__details-wrap {
     width: 1220px;
+    padding-left: 0;
   }
 }
 
@@ -373,19 +396,14 @@
   .form__title {
     font-size: 36px;
     line-height: 36px;
+    margin-left: -30px;
   }
 
   .form__details--title {
     width: 512px;
     padding-right: 42px;
-    padding-left: 39px;
-  }
-}
-
-@media (min-width: 768px) {
-  .form__details--title {
-    padding-right: 40px;
     padding-left: 40px;
+    margin-left: -40px;
   }
 }
 
@@ -467,10 +485,12 @@
 .form__details-item svg {
   position: absolute;
   right: 15px;
+  top: 15px;
 }
 
 .form__details-item:nth-child(2) svg {
   right: 9px;
+  top: 11px;
 }
 
 .form__details-item input:nth-child(2) {
@@ -504,10 +524,12 @@
 
   .form__details-item svg {
     right: 52px;
+    top: 18px;
   }
 
   .form__details-item:nth-child(2) svg {
     right: 48px;
+    top: 15px;
   }
 }
 
@@ -544,15 +566,9 @@
 @media (min-width: 768px) {
   .form__comments--title {
     width: 182px;
-    padding-right: 38px;
-    padding-left: 39px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .form__comments--title {
     padding-right: 40px;
     padding-left: 40px;
+    margin-left: -40px;
   }
 }
 
@@ -578,12 +594,15 @@
 @media (min-width: 768px) {
   .form__comments-wrap {
     width: 92%;
+    box-sizing: border-box;
+    padding-left: 40px;
   }
 }
 
 @media (min-width: 1440px) {
   .form__comments-wrap {
     width: 1220px;
+    padding-left: 0;
   }
 }
 
@@ -650,12 +669,15 @@
 @media (min-width: 768px) {
   .form__additional-information-wrap {
     width: 92%;
+    box-sizing: border-box;
+    padding-left: 40px;
   }
 }
 
 @media (min-width: 1440px) {
   .form__additional-information-wrap {
     width: 1220px;
+    padding-left: 0;
   }
 }
 
@@ -669,6 +691,7 @@
     width: 212px;
     padding-right: 41px;
     padding-left: 40px;
+    margin-left: -40px;
   }
 }
 
@@ -774,6 +797,8 @@
     width: 92%;
     margin-top: 59px;
     display: flex;
+    box-sizing: border-box;
+    padding-left: 40px;
   }
 }
 
@@ -781,6 +806,7 @@
   .form__post-wrap {
     width: 1220px;
     margin-top: 66px;
+    padding-left: 0;
   }
 }
 
