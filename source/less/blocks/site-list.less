@@ -89,6 +89,10 @@
     color: @basic-white;
   }
 
+  .site-list__item--desctop a {
+    color: black;
+  }
+
   .site-list__item--active a::before {
     position: absolute;
     content: "";
@@ -96,5 +100,9 @@
     height: 2px;
     background-color: @basic-white;
     bottom: 0;
+  }
+
+  .site-list__item--desctop + .site-list__item--active a::before {
+    background-color: @green;
   }
 }
