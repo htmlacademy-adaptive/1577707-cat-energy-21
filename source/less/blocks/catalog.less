@@ -3,23 +3,33 @@
   line-height: 36px;
   font-family: "Arial", "Oswald", sans-serif;
   font-weight: 400;
+  margin-top: 27px;
 }
 
 @media (min-width: 768px) {
   .main__title {
     font-size: 60px;
     line-height: 60px;
+    margin-top: 65px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main__title {
+    margin-top: 78px;
   }
 }
 
 .catalog {
   display: grid;
   grid-template-columns: 1fr;
+  margin-top: 60px;
 }
 
 @media (min-width: 768px) {
   .catalog {
     grid-template-columns: 1fr 1fr;
+    margin-top: 84px;
   }
 }
 
@@ -31,35 +41,54 @@
 
 .card {
   width: 280px;
-  margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .card {
-    width: 324px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .card {
-    width: 245px;
-  }
+.card:not(:nth-child(1)) {
+  margin-top: 33px;
+  padding-top: 11px;
 }
 
 .catalog__show-all {
-  width: 280px;
+  margin-top: 33px;
 }
 
 @media (min-width: 768px) {
-  .catalog__show-all {
+  .card {
     width: 324px;
   }
 }
 
 @media (min-width: 1440px) {
-  .catalog__show-all {
+  .card {
     width: 245px;
   }
+}
+
+.card__description {
+  display: flex;
+  align-items: center;
+}
+
+.card__description-link {
+  width: 50%;
+  text-align: center;
+}
+
+/*Временно*/
+.card__description img{
+  width: 68px;
+  height: 86px;
+}
+
+@media (min-width: 768px) {
+  .card__description img{
+    width: 161px;
+    height: 172px;
+  }
+}
+
+.card__description-info {
+  width: 50%;
 }
 
 .card__title a {
@@ -70,6 +99,11 @@
   text-transform: uppercase;
   color: @basic-black;
   text-decoration: none;
+}
+
+.card__title {
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -83,6 +117,18 @@
   .card__title a {
     line-height: 21px;
   }
+}
+
+.card__specifications {
+  width: 140px;
+  margin-top: 14px;
+}
+
+.card__specifications th {
+  text-align: left;
+}
+.card__specifications td {
+  text-align: right;
 }
 
 .card__specifications th,
@@ -99,6 +145,22 @@
   .card__specifications td {
     font-size: 16px;
     line-height: 16px;
+  }
+}
+
+.catalog__show-all {
+  width: 280px;
+}
+
+@media (min-width: 768px) {
+  .catalog__show-all {
+    width: 324px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .catalog__show-all {
+    width: 245px;
   }
 }
 
@@ -129,6 +191,11 @@
     font-size: 16px;
     line-height: 18px;
   }
+}
+
+.card__button {
+  display: block;
+  width: 100%;
 }
 
 .catalog__show-button {
