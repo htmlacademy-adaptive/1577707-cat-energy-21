@@ -244,6 +244,7 @@ img {
 }
 @media (min-width: 1440px) {
   .site-list__item a {
+    font-size: 20px;
     line-height: 29px;
   }
 }
@@ -1176,6 +1177,11 @@ img {
 .social__item:nth-child(3n) {
   margin-right: 0;
 }
+@media (min-width: 768px) {
+  .social__item:last-child {
+    margin-right: 0;
+  }
+}
 .footer__copyrigh-link {
   position: relative;
   font-size: 16px;
@@ -1234,6 +1240,7 @@ img {
 .catalog {
   display: grid;
   grid-template-columns: 1fr;
+  grid-row-gap: 44px;
   margin-top: 60px;
 }
 @media (min-width: 670px) {
@@ -1255,6 +1262,7 @@ img {
     margin-top: 84px;
     box-sizing: border-box;
     grid-column-gap: 60px;
+    grid-row-gap: 59px;
     justify-items: center;
   }
 }
@@ -1278,25 +1286,19 @@ img {
 @media (min-width: 1440px) {
   .catalog {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 30px;
+    grid-column-gap: 80px;
+    grid-row-gap: 63px;
     padding-right: 0;
   }
 }
 .card {
   width: 100%;
-  margin-top: 44px;
   display: flex;
   flex-direction: column;
-}
-.card:nth-child(1) {
-  margin-top: 0;
 }
 @media (min-width: 670px) {
   .card {
     width: 280px;
-  }
-  .card:nth-child(2) {
-    margin-top: 0;
   }
 }
 @media (min-width: 768px) {
@@ -1305,22 +1307,12 @@ img {
     padding: 40px 37px;
     padding-top: 0;
     box-sizing: border-box;
-    margin-top: 59px;
-    background: linear-gradient(to top, #F2F2F2 430px, #ffffff 430px);
-  }
-}
-@media (min-width: 1085px) {
-  .card:nth-child(3) {
-    margin-top: 0;
+    background: linear-gradient(to top, #F2F2F2 84%, #ffffff 84%);
   }
 }
 @media (min-width: 1440px) {
   .card {
     width: 245px;
-    margin-top: 63px;
-  }
-  .card:nth-child(4) {
-    margin-top: 0;
   }
 }
 .card__description {
@@ -1462,7 +1454,7 @@ img {
   background-image: url("../img/plus.svg");
   background-repeat: no-repeat;
   top: 24px;
-  right: calc(50% - 10px);
+  right: calc(50% - 15px);
 }
 @media (min-width: 670px) {
   .catalog__show-all {
@@ -1484,7 +1476,7 @@ img {
     height: 60px;
     background-image: url("../img/plus-tablet.svg");
     top: 125px;
-    right: calc(50% - 20px);
+    right: calc(50% - 30px);
   }
 }
 @media (min-width: 1440px) {
@@ -1738,6 +1730,9 @@ img {
   width: 100%;
   margin-top: 13px;
 }
+.additional-goods__item-tabl td {
+  width: 50%;
+}
 .additional-goods__item-tabl td:nth-child(1) {
   text-align: left;
   padding-right: 5px;
@@ -1751,10 +1746,13 @@ img {
     line-height: 18px;
     margin-top: 0;
     width: auto;
-    max-width: 50%;
+    max-width: 80%;
   }
   .additional-goods__item-tabl td:nth-child(1) {
-    padding-right: 50px;
+    padding-right: 10px;
+  }
+  .additional-goods__item-tabl td {
+    width: auto;
   }
 }
 .additional-goods__item-button {
@@ -1796,7 +1794,7 @@ img {
   text-align: center;
   align-items: flex-end;
   padding-bottom: 43px;
-  padding-top: 120px;
+  padding-top: 125px;
   box-sizing: border-box;
   position: relative;
   margin-top: 39px;
@@ -1822,10 +1820,10 @@ img {
     background-position: 0 0;
     background-image: url("../img/gift-tablet.png");
     background-size: cover;
-    padding-bottom: 0;
     align-items: center;
     margin-top: 69px;
-    padding-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 190px;
   }
   .additional-goods__gift::before {
