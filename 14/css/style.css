@@ -177,7 +177,7 @@ img {
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
 }
 .header__logo img {
-  width: 33px;
+  width: 191px;
   height: 37px;
 }
 @media (min-width: 768px) {
@@ -211,7 +211,7 @@ img {
 @media (min-width: 768px) {
   .navigation {
     min-width: 440px;
-    margin-top: 28px;
+    margin-top: 17px;
   }
 }
 @media (min-width: 1440px) {
@@ -298,7 +298,7 @@ img {
     color: #ffffff;
   }
   .site-list__item--desctop a {
-    color: black;
+    color: #000000;
   }
   .site-list__item--active a::before {
     position: absolute;
@@ -344,12 +344,17 @@ img {
     width: 50%;
     height: 696px;
     right: 0;
-    background-image: url("../img/desctop-fon.png");
+    background-image: url("../img/promo-fon-desktop.jpg");
     background-position: 10% center;
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
     z-index: -1;
+  }
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .promo::before {
+    background-image: url("../img/promo-fon-desktop@2x.jpg");
   }
 }
 .promo__text {
@@ -358,13 +363,18 @@ img {
   text-align: center;
   color: #ffffff;
   background-color: #68B738;
-  background-image: url("../img/promo-mobile.png");
+  background-image: url("../img/promo-fon-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 65% 0;
   background-size: cover;
   padding-top: 27px;
   box-sizing: border-box;
   padding-bottom: 110px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .promo__text {
+    background-image: url("../img/promo-fon-mobile@2x.jpg");
+  }
 }
 @media (min-width: 768px) {
   .promo__text {
@@ -386,18 +396,20 @@ img {
 .promo__image {
   width: 280px;
   height: 270px;
-  margin: 0 auto;
+  margin-left: calc(50% - 140px);
   margin-top: -110px;
   z-index: 1;
   position: relative;
+  order: 1;
 }
 @media (min-width: 768px) {
   .promo__image {
-    order: 3;
-    width: 709px;
+    order: 2;
+    width: 707px;
     height: 609px;
     margin-top: -85px;
     z-index: 0;
+    margin-left: calc(50% - 350px);
   }
 }
 @media (min-width: 1440px) {
@@ -417,19 +429,14 @@ img {
   font-weight: 400;
   padding: 0;
   margin: 0 auto;
-  width: 389px;
+  max-width: 381px;
 }
 @media (min-width: 768px) {
   .promo__title {
     margin: 0;
     font-size: 60px;
     line-height: 60px;
-    width: 420px;
-  }
-}
-@media (min-width: 768px) {
-  .promo__title {
-    margin: 0;
+    max-width: 420px;
   }
 }
 .promo__slogan {
@@ -474,6 +481,7 @@ img {
     font-size: 20px;
     line-height: 20px;
     box-sizing: border-box;
+    order: 0;
   }
 }
 @media (min-width: 1440px) {
@@ -1704,7 +1712,7 @@ img {
 .additional-goods__item-title {
   margin: 0;
   padding: 0;
-  padding-right: 30px;
+  margin-right: 30px;
 }
 .additional-goods__item-title a {
   font-size: 16px;
@@ -1719,6 +1727,10 @@ img {
   .additional-goods__item-title a {
     font-size: 20px;
     line-height: 20px;
+  }
+  .additional-goods__item-title {
+    width: 25%;
+    box-sizing: border-box;
   }
 }
 .additional-goods__item-tabl {
@@ -1746,7 +1758,10 @@ img {
     line-height: 18px;
     margin-top: 0;
     width: auto;
-    max-width: 80%;
+    max-width: 75%;
+  }
+  .additional-goods__item-tabl tr {
+    align-items: flex-start;
   }
   .additional-goods__item-tabl td:nth-child(1) {
     padding-right: 10px;
