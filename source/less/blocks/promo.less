@@ -33,7 +33,12 @@
     width: 50%;
     height: 696px;
     right: 0;
-    background-image: url("../img/desctop-fon.png");
+    background-image: url("../img/promo-fon-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-fon-desktop@2x.jpg");
+    }
+
     background-position: 10% center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,7 +53,12 @@
   text-align: center;
   color: @basic-white;
   background-color: @green;
-  background-image: url("../img/promo-mobile.png");
+  background-image: url("../img/promo-fon-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo-fon-mobile@2x.jpg");
+  }
+
   background-repeat: no-repeat;
   background-position: 65% 0;
   background-size: cover;
@@ -79,19 +89,21 @@
 .promo__image {
   width: 280px;
   height: 270px;
-  margin: 0 auto;
+  margin-left: calc(50% - 140px);
   margin-top: -110px;
   z-index: 1;
   position: relative;
+  order: 1;
 }
 
 @media (min-width: 768px) {
   .promo__image {
-    order: 3;
-    width: 709px;
+    order: 2;
+    width: 707px;
     height: 609px;
     margin-top: -85px;
     z-index: 0;
+    margin-left: calc(50% - 350px);
   }
 }
 
@@ -113,7 +125,7 @@
   font-weight: 400;
   padding: 0;
   margin: 0 auto;
-  width: 389px;
+  max-width: 381px;
 }
 
 @media (min-width: 768px) {
@@ -121,13 +133,7 @@
     margin: 0;
     font-size: 60px;
     line-height: 60px;
-    width: 420px;
-  }
-}
-
-@media (min-width: 768px) {
-  .promo__title {
-    margin: 0;
+    max-width: 420px;
   }
 }
 
@@ -176,6 +182,7 @@
     font-size: 20px;
     line-height: 20px;
     box-sizing: border-box;
+    order: 0;
   }
 }
 
