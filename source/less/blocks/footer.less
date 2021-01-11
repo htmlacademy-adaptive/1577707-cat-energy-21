@@ -31,6 +31,10 @@
   background-color: @basic-white;
 }
 
+.footer__location-catalog {
+  background-color: @grey-100;
+}
+
 .footer__address {
   width: 87%;
   margin: 0 auto;
@@ -149,8 +153,14 @@
   margin-right: 33px;
 }
 
-.social__item:last-child {
+.social__item:nth-child(3n) {
   margin-right: 0;
+}
+
+@media (min-width: 768px) {
+  .social__item:last-child {
+    margin-right: 0;
+  }
 }
 
 .footer__copyrigh-link {

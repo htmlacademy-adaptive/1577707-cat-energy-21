@@ -23,38 +23,84 @@
 .catalog {
   display: grid;
   grid-template-columns: 1fr;
+  grid-row-gap: 44px;
   margin-top: 60px;
+}
+
+@media (min-width: 670px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+  }
+}
+
+@media (min-width: 670px) {
+  .wrapper-catalog {
+    width: 87%;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
 }
 
 @media (min-width: 768px) {
   .catalog {
     grid-template-columns: 1fr 1fr;
     margin-top: 84px;
+    box-sizing: border-box;
+    grid-column-gap: 60px;
+    grid-row-gap: 59px;
+    justify-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper-catalog {
+    width: 92%;
+  }
+}
+
+@media (min-width: 1085px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper-catalog {
+    width: 1220px;
+    justify-items: start;
   }
 }
 
 @media (min-width: 1440px) {
   .catalog {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 63px;
+    padding-right: 0;
   }
 }
 
 .card {
-  width: 280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.card:not(:nth-child(1)) {
-  margin-top: 33px;
-  padding-top: 11px;
-}
-
-.catalog__show-all {
-  margin-top: 33px;
+@media (min-width: 670px) {
+  .card {
+    width: 280px;
+  }
 }
 
 @media (min-width: 768px) {
   .card {
     width: 324px;
+    padding: 40px 37px;
+    padding-top: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to top, @grey-100 84%, @basic-white 84%);
   }
 }
 
@@ -67,6 +113,13 @@
 .card__description {
   display: flex;
   align-items: center;
+  margin-bottom: 13px;
+}
+
+@media (min-width: 768px) {
+  .card__description {
+    margin-bottom: 33px;
+  }
 }
 
 .card__description-link {
@@ -74,14 +127,31 @@
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .card__description-link {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .card__description-link img {
+    margin: 0 auto;
+  }
+}
+
 /*Временно*/
-.card__description img{
+.card__description img {
   width: 68px;
   height: 86px;
 }
 
 @media (min-width: 768px) {
-  .card__description img{
+  .card__description {
+    flex-direction: column;
+  }
+
+  .card__description img {
     width: 161px;
     height: 172px;
   }
@@ -89,6 +159,12 @@
 
 .card__description-info {
   width: 50%;
+}
+
+@media (min-width: 768px) {
+  .card__description-info {
+    width: auto;
+  }
 }
 
 .card__title a {
@@ -104,9 +180,17 @@
 .card__title {
   margin: 0;
   padding: 0;
+  width: 76px;
 }
 
 @media (min-width: 768px) {
+  .card__title {
+    text-align: center;
+    width: 154px;
+    margin: 0 auto;
+    margin-top: 34px;
+  }
+
   .card__title a {
     font-size: 20px;
     line-height: 24px;
@@ -114,6 +198,10 @@
 }
 
 @media (min-width: 1440px) {
+  .card__title {
+    margin-top: 42px;
+  }
+
   .card__title a {
     line-height: 21px;
   }
@@ -127,6 +215,7 @@
 .card__specifications th {
   text-align: left;
 }
+
 .card__specifications td {
   text-align: right;
 }
@@ -141,26 +230,83 @@
 }
 
 @media (min-width: 768px) {
+  .card__specifications {
+    width: 250px;
+    margin-top: 14px;
+    position: relative;
+    border-collapse: collapse;
+  }
+
   .card__specifications th,
   .card__specifications td {
     font-size: 16px;
     line-height: 16px;
+    padding-bottom: 9px;
+    padding-top: 7px;
+    border-bottom: 1px solid @grey-300;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card__specifications {
+    width: 170px;
   }
 }
 
 .catalog__show-all {
-  width: 280px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 78px;
+  border-top: 1px solid @grey-200;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__show-all::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  top: 24px;
+  right: calc(50% - 15px);
+}
+
+@media (min-width: 670px) {
+  .catalog__show-all {
+    width: 280px;
+    margin-top: 44px;
+    border-top: none;
+  }
 }
 
 @media (min-width: 768px) {
   .catalog__show-all {
     width: 324px;
+    align-items: center;
+    padding-top: 232px;
+    margin-top: 59px;
+    padding-bottom: 40px;
+  }
+
+  .catalog__show-all::before {
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/plus-tablet.svg");
+    top: 125px;
+    right: calc(50% - 30px);
   }
 }
 
 @media (min-width: 1440px) {
   .catalog__show-all {
     width: 245px;
+    padding-top: 242px;
+    margin-top: 63px;
   }
 }
 
@@ -169,12 +315,16 @@
   line-height: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
   .catalog__show-title {
     font-size: 20px;
     line-height: 22px;
+    width: 135px;
   }
 }
 
@@ -184,18 +334,46 @@
   font-family: "Arial", sans-serif;
   font-weight: 400;
   color: @dark-grey-100;
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
 }
 
 @media (min-width: 768px) {
   .catalog__show-text {
     font-size: 16px;
     line-height: 18px;
+    width: 170px;
+    margin-top: 23px;
   }
 }
 
 .card__button {
   display: block;
-  width: 100%;
+  width: 87%;
+  margin: 0 auto;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: auto;
+}
+
+@media (min-width: 670px) {
+  .card__button {
+    width: 99%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card__button {
+    width: 248px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card__button {
+    width: 170px;
+  }
 }
 
 .catalog__show-button {
@@ -207,4 +385,30 @@
   text-decoration: none;
   color: @dark-grey-100;
   background-color: @grey-100;
+  margin: auto;
+  margin-top: 13px;
+  padding: 10px 10px;
+  width: 87%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 670px) {
+  .catalog__show-button {
+    width: 100%;
+    margin: 0;
+    margin-top: auto;
+    padding: 10px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog__show-button {
+    width: 248px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .catalog__show-button {
+    width: 170px;
+  }
 }
