@@ -147,8 +147,37 @@
 
 @media (min-width: 768px) {
   .features__item {
+    position: relative;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .features__item::before {
+    position: absolute;
+    content: "";
+    font-size: 280px;
+    line-height: 280px;
+    color: @grey-100;
+    font-family: "Oswald";
+    top: -39px;
+    z-index: -1;
+    left: 127px;
+  }
+
+  .features__item:nth-child(1)::before {
+    content: "1";
+  }
+
+  .features__item:nth-child(2)::before {
+    content: "2";
+  }
+
+  .features__item:nth-child(3)::before {
+    content: "3";
+  }
+
+  .features__item:nth-child(4)::before {
+    content: "4";
   }
 }
 
