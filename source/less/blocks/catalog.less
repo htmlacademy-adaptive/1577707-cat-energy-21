@@ -1,7 +1,7 @@
 .main__title {
   font-size: 36px;
   line-height: 36px;
-  font-family: "Arial", "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   margin-top: 27px;
 }
@@ -125,25 +125,17 @@
 .card__description-link {
   width: 50%;
   text-align: center;
+  display: block;
 }
 
 @media (min-width: 768px) {
   .card__description-link {
     width: 100%;
-    min-height: 200px;
+    min-height: 208px;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
   }
-
-  .card__description-link img {
-    margin: 0 auto;
-  }
-}
-
-/*Временно*/
-.card__description img {
-  width: 68px;
-  height: 86px;
 }
 
 @media (min-width: 768px) {
@@ -154,6 +146,18 @@
   .card__description img {
     width: 161px;
     height: 172px;
+  }
+
+  .card__description-link--max img {
+    width: 168px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card__description-link--max img {
+    width: 172px;
+    height: 201px;
   }
 }
 
@@ -390,6 +394,14 @@
   padding: 10px 10px;
   width: 87%;
   box-sizing: border-box;
+}
+
+.catalog__show-button:hover {
+  background-color: @grey-200;
+}
+
+.catalog__show-button:active span {
+  opacity: 0.3;
 }
 
 @media (min-width: 670px) {

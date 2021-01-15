@@ -29,11 +29,11 @@
 }
 
 .footer__location {
-  background-color: @basic-white;
+  background-color:  @grey-100;
 }
 
-.footer__location-catalog {
-  background-color: @grey-100;
+.footer__location-index {
+  background-color: @basic-white
 }
 
 .footer__address {
@@ -90,6 +90,7 @@
 .footer__address p {
   font-size: 14px;
   line-height: 20px;
+  font-family: Arial, sans-serif;
   color: @dark-grey-100;
   margin: 0;
   padding: 0;
@@ -109,6 +110,14 @@
   position: relative;
   text-align: center;
   padding-bottom: 31px;
+}
+
+.footer__logo:hover {
+  opacity: 0.8;
+}
+
+.footer__logo:active {
+  opacity: 0.6;
 }
 
 .footer__logo::before {
@@ -154,6 +163,14 @@
   }
 }
 
+.social__item a:hover svg {
+  stroke: @green;
+}
+
+.social__item a:active svg {
+  opacity: 0.3;
+}
+
 .social__item {
   margin-right: 30px;
 }
@@ -182,8 +199,9 @@
   }
 
   .social__item:nth-child(3n) svg {
-    width: 28px;
-    height: 33px;
+    width: 18px;
+    height: 26px;
+    stroke: @grey-400;
   }
 }
 
@@ -202,6 +220,15 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 31px;
+  text-decoration: none;
+}
+
+.footer__copyrigh-link:hover svg {
+  stroke: @green;
+}
+
+.footer__copyrigh-link:active{
+  opacity: 0.3;
 }
 
 .footer__copyrigh-link::before {

@@ -26,13 +26,13 @@
 
 @media (min-width: 768px) {
   .example {
-    background: linear-gradient(to top, @grey-350 463px, @basic-white 463px);
+    background-image: linear-gradient(to top, @grey-350 463px, @basic-white 463px);
   }
 }
 
 @media (min-width: 1440px) {
   .example {
-    background: linear-gradient(to top, @grey-350 100%);
+    background-image: linear-gradient(to right, #f2f2f2 46.5%,#eaeaea 30%);
     margin-top: 214px;
   }
 }
@@ -316,6 +316,7 @@
   height: 6px;
   border-radius: 4px;
   background-color: @green;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -327,6 +328,17 @@
     background-color: @basic-white;
     border-radius: 50%;
     border: 1px solid @grey-300;
+    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+  }
+
+  .example__weight-toggle:hover {
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  .example__weight-toggle:active {
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.2));
+    border: 1px solid @green;
+    outline: none;
   }
 
   .example__weight-toggle::before {
@@ -350,11 +362,22 @@
   background-color: inherit;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
   .example__weight-button {
     font-size: 20px;
     line-height: 29px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    padding: 0;
+  }
+
+  .example__weight-button:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .example__weight-button:active {
+    border-bottom: none;
   }
 }

@@ -198,6 +198,7 @@
   text-transform: uppercase;
   margin-top: 19px;
   padding-right: 40px;
+  transition: all 0.3s;
 }
 
 @media (min-width: 768px) {
@@ -208,7 +209,7 @@
 
 @media (min-width: 1440px) {
   .category-catalog__link {
-    padding-right: 58px;
+    padding-right: 66px;
   }
 }
 
@@ -216,12 +217,24 @@
   display: block;
   content: "";
   position: absolute;
-  width: 32px;
+  width: 24px;
   height: 10px;
-  right: 0;
+  right: 8px;
   top: 5px;
   background-image: url("../img/srech-right.svg");
   background-repeat: no-repeat;
+
+}
+
+.category-catalog__link:hover::before {
+  width: 32px;
+  height: 11;
+  right: 0;
+  background-image: url("../img/srech-right-max.svg");
+}
+
+.category-catalog__link:active {
+  opacity: 0.3;
 }
 
 @media (min-width: 768px) {
