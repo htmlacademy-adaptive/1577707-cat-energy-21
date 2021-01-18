@@ -386,6 +386,7 @@ img {
 .promo__text {
   position: relative;
   min-height: 280px;
+  padding: 0 10px;
   text-align: center;
   color: #ffffff;
   background-color: #68B738;
@@ -410,7 +411,7 @@ img {
     text-align: left;
     width: auto;
     min-height: auto;
-    padding-bottom: 0;
+    padding: 0;
   }
 }
 @media (min-width: 1440px) {
@@ -444,7 +445,7 @@ img {
     width: 552px;
     height: 499px;
     margin: 0;
-    right: 201px;
+    right: 221px;
     top: 32px;
   }
 }
@@ -749,7 +750,7 @@ img {
 @media (min-width: 1440px) {
   .features {
     margin-top: 71px;
-    padding-bottom: 70px;
+    padding-bottom: 0;
   }
 }
 .features__list {
@@ -766,7 +767,7 @@ img {
     margin-top: 72px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 134px 182px;
+    grid-gap: 65px 182px;
   }
 }
 @media (min-width: 1440px) {
@@ -867,6 +868,7 @@ img {
     position: relative;
     font-size: 16px;
     line-height: 24px;
+    min-height: 230px;
   }
   .features__item::before {
     position: absolute;
@@ -933,7 +935,7 @@ img {
 }
 @media (min-width: 1440px) {
   .example {
-    background-image: linear-gradient(to right, #f2f2f2 46.5%, #eaeaea 30%);
+    background-image: linear-gradient(to right, #F2F2F2 46.5%, #EAEAEA 0);
     margin-top: 214px;
   }
 }
@@ -1036,7 +1038,7 @@ img {
 }
 @media (min-width: 1440px) {
   .example__stats dt {
-    background-color: #EAEAEA;
+    background-color: #F2F2F2;
   }
 }
 .example__stats dd {
@@ -1173,7 +1175,7 @@ img {
 }
 .example__weight-toggle {
   position: absolute;
-  left: 6px;
+  left: 0;
   top: 3px;
   border: none;
   width: 35px;
@@ -1219,8 +1221,8 @@ img {
   font-weight: 400;
   text-transform: uppercase;
   background-color: inherit;
-  border: none;
   outline: none;
+  border: none;
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -1230,11 +1232,12 @@ img {
     border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
     padding: 0;
   }
-  .example__weight-button:hover {
+  .example__weight-button:hover,
+  .example__weight-button:focus {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
   .example__weight-button:active {
-    border-bottom: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
 }
 .footer {
@@ -1399,6 +1402,10 @@ img {
 .social__item:nth-child(3n) {
   margin-right: 0;
 }
+.social__item:nth-child(3n) svg {
+  height: 26px;
+  stroke: #666666;
+}
 @media (min-width: 768px) {
   .social__item:nth-child(1) svg {
     width: 30px;
@@ -1423,6 +1430,7 @@ img {
   position: relative;
   font-size: 16px;
   line-height: 18px;
+  font-family: Arial, sans-serif;
   color: #444444;
   display: flex;
   justify-content: space-between;
@@ -2316,10 +2324,20 @@ img {
   margin-left: 14px;
   padding: 14px 15px;
   box-sizing: border-box;
-  width: 100%;
+  width: 1000%;
   border: 1px solid #E7E7E7;
   outline: none;
   height: 45px;
+}
+.form__general-input:hover {
+  border: 1px solid #CDCDCD;
+}
+.form__general-input:focus-within,
+.form__general-input:active {
+  border: 2px solid #444444;
+}
+.form__general-input.general-input-error {
+  border: 2px solid #FF8282;
 }
 /* Chrome, Safari, Edge, Opera */
 .form__general-item input::-webkit-outer-spin-button,
@@ -2454,6 +2472,13 @@ img {
   .form__additionally-item label {
     padding-left: 88px;
   }
+}
+.form__radio + label {
+  cursor: pointer;
+}
+.form__radio:disabled + label {
+  opacity: 0.3;
+  cursor: auto;
 }
 .form__radio + label::before {
   position: absolute;
@@ -2641,6 +2666,28 @@ img {
   line-height: 18px;
   color: #444444;
   height: 45px;
+}
+.form__details-item input:focus-within,
+.form__details-item input:active {
+  border: 2px solid #444444;
+}
+.form__details-item svg {
+  stroke: #000000;
+}
+.form__details-item input:focus-within + svg,
+.form__details-item input:active + svg {
+  stroke: #68B738;
+}
+.form__details-item input:invalid {
+  border: 2px solid #FF8282;
+}
+.form__details-input--email.general-input-error,
+.form__details-input--tel.general-input-error {
+  border: 2px solid #FF8282;
+}
+.form__details-input--email.general-input-error + svg,
+.form__details-input--tel.general-input-error + svg {
+  stroke: #FF8282;
 }
 .form__details-item svg {
   position: absolute;
@@ -2876,6 +2923,13 @@ img {
     padding-left: 58px;
     padding-bottom: 6px;
   }
+}
+.form__additional-information-checkbox + label {
+  cursor: pointer;
+}
+.form__additional-information-checkbox:disabled + label {
+  opacity: 0.3;
+  cursor: auto;
 }
 .form__additional-information-checkbox + label::before {
   position: absolute;
