@@ -115,10 +115,23 @@
   margin-left: 14px;
   padding: 14px 15px;
   box-sizing: border-box;
-  width: 100%;
+  width: 1000%;
   border: 1px solid @grey-310;
   outline: none;
   height: 45px;
+}
+
+.form__general-input:hover {
+  border: 1px solid @grey-300;
+}
+
+.form__general-input:focus-within,
+.form__general-input:active {
+  border: 2px solid @dark-grey-100;
+}
+
+.form__general-input.general-input-error {
+  border: 2px solid @error;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -270,6 +283,15 @@
   .form__additionally-item label {
     padding-left: 88px;
   }
+}
+
+.form__radio + label {
+  cursor: pointer;
+}
+
+.form__radio:disabled + label {
+  opacity: 0.3;
+  cursor: auto;
 }
 
 .form__radio + label::before {
@@ -481,6 +503,34 @@
   line-height: 18px;
   color: @dark-grey-100;
   height: 45px;
+}
+
+.form__details-item input:focus-within,
+.form__details-item input:active {
+  border: 2px solid @dark-grey-100;
+}
+
+.form__details-item svg {
+  stroke: @basic-black;
+}
+
+.form__details-item input:focus-within + svg,
+.form__details-item input:active + svg {
+  stroke: @green;
+}
+
+.form__details-item input:invalid {
+  border: 2px solid @error;
+}
+
+.form__details-input--email.general-input-error,
+.form__details-input--tel.general-input-error {
+  border: 2px solid @error;
+}
+
+.form__details-input--email.general-input-error + svg,
+.form__details-input--tel.general-input-error + svg {
+  stroke: @error;
 }
 
 .form__details-item svg {
@@ -738,6 +788,15 @@
     padding-left: 58px;
     padding-bottom: 6px;
   }
+}
+
+.form__additional-information-checkbox + label {
+  cursor: pointer;
+}
+
+.form__additional-information-checkbox:disabled + label {
+  opacity: 0.3;
+  cursor: auto;
 }
 
 .form__additional-information-checkbox + label::before {

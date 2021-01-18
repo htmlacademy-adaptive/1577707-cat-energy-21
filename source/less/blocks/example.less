@@ -32,7 +32,7 @@
 
 @media (min-width: 1440px) {
   .example {
-    background-image: linear-gradient(to right, #f2f2f2 46.5%,#eaeaea 30%);
+    background-image: linear-gradient(to right, @grey-100 46.5%, @grey-350 0);
     margin-top: 214px;
   }
 }
@@ -150,7 +150,7 @@
 
 @media (min-width: 1440px) {
   .example__stats dt {
-    background-color: @grey-350;
+    background-color: @grey-100;
   }
 }
 
@@ -309,7 +309,7 @@
 
 .example__weight-toggle {
   position: absolute;
-  left: 6px;
+  left: 0;
   top: 3px;
   border: none;
   width: 35px;
@@ -360,8 +360,8 @@
   font-weight: 400;
   text-transform: uppercase;
   background-color: inherit;
-  border: none;
   outline: none;
+  border: none;
   cursor: pointer;
 }
 
@@ -373,11 +373,12 @@
     padding: 0;
   }
 
-  .example__weight-button:hover {
+  .example__weight-button:hover,
+  .example__weight-button:focus {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   .example__weight-button:active {
-    border-bottom: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
 }
