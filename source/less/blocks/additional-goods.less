@@ -1,17 +1,11 @@
 .additional-goods {
   position: relative;
-  margin-top: 25px;
+  margin-top: 46px;
 }
 
 @media (min-width: 768px) {
   .additional-goods {
-    margin-top: 108px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .additional-goods {
-    margin-top: 115px;
+    margin-top: 70px;
   }
 }
 
@@ -62,7 +56,7 @@
 }
 
 .additional-goods__wrap {
-  margin-top: 36px;
+  margin-top: 32px;
   padding-bottom: 35px;
 }
 
@@ -80,6 +74,7 @@
     justify-content: space-between;
     padding-left: 0;
     padding-bottom: 86px;
+    margin-top: 78px;
   }
 }
 
@@ -102,29 +97,33 @@
 }
 
 .additional-goods__item {
-  padding-top: 13px;
+  padding-top: 10px;
   padding-bottom: 19px;
   border-bottom: 1px solid @grey-300;
 }
 
 @media (min-width: 768px) {
   .additional-goods__item {
-    padding-top: 26px;
+    padding-top: 22px;
     padding-bottom: 28px;
     padding-left: 37px;
     padding-right: 37px;
+    border-right: 1px solid @grey-300;
+    border-left: 1px solid @grey-300;
   }
 }
 
 @media (min-width: 1440px) {
   .additional-goods__item {
-    padding-top: 15px;
-    padding-bottom: 17px;
+    padding-top: 20px;
+    padding-bottom: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
     padding-right: 0;
+    border-right: none;
+    border-left: none;
   }
 }
 
@@ -176,7 +175,7 @@
   font-weight: 400;
   color: @dark-grey-100;
   width: 100%;
-  margin-top: 13px;
+  margin-top: 2px;
 }
 
 .additional-goods__item-tabl td {
@@ -206,7 +205,7 @@
   }
 
   .additional-goods__item-tabl td:nth-child(1) {
-    padding-right: 10px;
+    padding-right: 40px;
   }
 
   .additional-goods__item-tabl td {
@@ -216,8 +215,15 @@
 
 @media (min-width: 768px) {
   .additional-goods__item-tabl {
-    width: 285px;
+    width: auto;
     max-width: 75%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .additional-goods__item-tabl {
+    width: 290px;
+    margin-top: 8px;
   }
 }
 
@@ -232,15 +238,17 @@
 
 @media (min-width: 768px) {
   .additional-goods__item-button {
-    padding: 7px;
-    margin-top: 27px;
+    padding: 10px;
+    margin-top: 23px;
   }
 }
 
 @media (min-width: 1440px) {
   .additional-goods__item-button {
     width: 244px;
-    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -6px;
   }
 }
 
@@ -311,7 +319,7 @@
   }
 
   .additional-goods__gift::before {
-    left: 130px;
+    left: 80px;
     top: 57px;
   }
 }

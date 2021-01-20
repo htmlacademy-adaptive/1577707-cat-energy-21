@@ -3,10 +3,10 @@
   padding-bottom: 31px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .example__wrapper {
-    padding-top: 43px;
-    padding-bottom: 64px;
+    padding-top: 30px;
+    padding-bottom: 75px;
   }
 }
 
@@ -32,7 +32,7 @@
 
 @media (min-width: 1440px) {
   .example {
-    background-image: linear-gradient(to right, @grey-100 46.5%, @grey-350 0);
+    background-image: linear-gradient(to right, @grey-100 46.5%, @grey-350 0%);
     margin-top: 214px;
   }
 }
@@ -52,11 +52,16 @@
   padding: 0;
 }
 
+@media (min-width: 768px) {
+  .example__description h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
 @media (min-width: 1440px) {
   .example__description h2 {
     margin-top: 58px;
-    font-size: 60px;
-    line-height: 60px;
   }
 }
 
@@ -144,6 +149,9 @@
   .example__stats dt {
     font-size: 14px;
     line-height: 14px;
+    width: auto;
+    padding: 0 5px;
+    margin-top: -8px;
     background-color: @basic-white;
   }
 }
@@ -164,7 +172,7 @@
   margin: 0;
   width: 124px;
   padding-top: 14px;
-  padding-bottom: 17px;
+  padding-bottom: 19px;
   border: 1px solid @grey-300;
   border-radius: 3px;
 }
@@ -173,6 +181,7 @@
   .example__stats dd {
     font-size: 30px;
     line-height: 37px;
+    width: 162px;
   }
 }
 
@@ -191,6 +200,8 @@
     font-size: 20px;
     line-height: 20px;
     margin: 0;
+    margin-top: 7px;
+    text-align: right;
   }
 
   .example__cost tr {
@@ -201,14 +212,15 @@
 
 @media (min-width: 1440px) {
   .example__cost {
-    margin-top: 35px;
+
+    margin-top: 55px;
     display: flex;
   }
 
   .example__cost tr {
     display: flex;
     flex-direction: row;
-    width: 337px;
+    width: 327px;
   }
 
   .example__cost td {
@@ -216,7 +228,7 @@
   }
 
   .example__cost td:nth-child(2) {
-    width: 40%;
+    width: 50%;
     text-align: right;
   }
 }
@@ -263,11 +275,11 @@
 }
 
 .example__weight-range {
-  width: 195px;
+  width: 210px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin-top: 23px;
+  margin-top: 27px;
   align-items: center;
 }
 
@@ -277,6 +289,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
   }
 }
 
@@ -309,7 +322,7 @@
 
 .example__weight-toggle {
   position: absolute;
-  left: 0;
+  left: 3px;
   top: 3px;
   border: none;
   width: 35px;
