@@ -7,10 +7,9 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
 const del = require("del");
+const uglify = require("gulp-uglify");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -35,7 +34,7 @@ exports.styles = styles;
 //Images
 
 const images = () => {
-  return gulp.src("source/img/*.{jpg,png,svg}")
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -44,17 +43,6 @@ const images = () => {
     .pipe(gulp.dest("build/img"))
 }
 
-exports.images = images;
-
-//Webp
-
-const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.createWebp = createWebp;
 
 //Html
 
@@ -68,14 +56,17 @@ exports.html = html;
 
 
 //Script
+
 const script = () => {
   return gulp.src("source/js/script.js")
+  .pipe(gulp.dest("build/js"))
+  .pipe(uglify())
+  .pipe(rename("script.min.js"))
   .pipe(gulp.dest("build/js"))
   .pipe(sync.stream());
 }
 
 exports.script = script;
-
 
 //Copy
 
@@ -132,13 +123,21 @@ const build = gulp.series(
     html,
     script,
     images,
-    copy,
-    createWebp
+    copy
   )
 )
 
 exports.build = build;
 
 exports.default = gulp.series(
-  styles, server, watcher
-);
+  clean,
+  gulp.parallel(
+    styles,
+    html,
+    script,
+    copy
+    ),
+    gulp.series(
+    server,
+    watcher
+));
