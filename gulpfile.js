@@ -10,7 +10,6 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
-const uglify = require("gulp-uglify-es");
 const del = require("del");
 const sync = require("browser-sync").create();
 
@@ -25,8 +24,8 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(sourcemap.write("."))
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
@@ -36,7 +35,7 @@ exports.styles = styles;
 //Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
