@@ -46,6 +46,19 @@
   display: block;
 }
 
+.site-list__item a:hover {
+  opacity: 0.6;
+}
+
+.site-list__item a:active {
+  opacity: 0.3;
+}
+
+.site-list__item--active a:hover,
+.site-list__item--active a:active {
+  opacity: 1;
+}
+
 .site-list__item {
   border-top: 1px solid @grey-500;
 }
