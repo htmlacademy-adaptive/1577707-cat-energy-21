@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
     <header class="page__header header">
@@ -50,7 +50,7 @@
           </li>
           <li class="category-catalog__item category-catalog__item--pro">
             <h3 class="category-catalog__title">Набор массы</h3>
-            <p class="category-catalog__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы ! ffaf</p>
+            <p class="category-catalog__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a href="#" class="category-catalog__link">Каталог pro</a>
           </li>
         </ul>
@@ -163,16 +163,6 @@
         </a>
       </div>
     </footer>
-    <script>
-      const btn = document.querySelector('.header__toggle');
-      const nav = document.querySelector('.site-list');
-      nav.classList.remove('site-list--nojs');
-      btn.classList.remove('header__toggle--nojs');
-
-      btn.addEventListener('click', function() {
-        this.classList.toggle('header__toggle--opened');
-        nav.classList.toggle('site-list--opened');
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

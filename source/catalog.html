@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
     <header class="page__header header">
@@ -293,7 +293,7 @@
       </section>
     </main>
     <footer class="page__footer footer">
-      <section class="footer__location footer__location-index">
+      <section class="footer__location">
         <h2 class="visually-hidden">Наше местоположение</h2>
         <div class="footer__address">
           <h2>приглашаем к сотрудничеству дилеров!</h2>
@@ -301,7 +301,7 @@
         </div>
       </section>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64190.61547169144!2d29.968220598935382!3d59.81663859975242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1610523380978!5m2!1sru!2sru" width="100%" height="362" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      <div class="footer__wrapper wrapper">
+      <div class="footer__wrapper footer__wrapper-catalog wrapper">
         <a href="index.html" class="footer__logo"><img src="img/footer-logo.svg" width="124" height="24" alt="Логотип Cat Enegy"></a>
         <ul class="footer__social social">
           <li class="social__item">
@@ -336,16 +336,6 @@
         </a>
       </div>
     </footer>
-    <script>
-      const btn = document.querySelector('.header__toggle');
-      const nav = document.querySelector('.site-list');
-      nav.classList.remove('site-list--nojs');
-      btn.classList.remove('header__toggle--nojs');
-
-      btn.addEventListener('click', function() {
-        this.classList.toggle('header__toggle--opened');
-        nav.classList.toggle('site-list--opened');
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
