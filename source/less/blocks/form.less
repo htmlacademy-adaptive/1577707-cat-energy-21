@@ -114,7 +114,7 @@
   font-family: "Oswald", "Arial", sans-serif;
   color: @dark-grey-100;
   margin-left: 14px;
-  padding: 14px 15px;
+  padding: 12px 15px;
   box-sizing: border-box;
   width: 1000%;
   border: 1px solid @grey-310;
@@ -129,6 +129,7 @@
 .form__general-input:focus-within,
 .form__general-input:active {
   border: 2px solid @dark-grey-100;
+  padding: 11px 14px;
 }
 
 .form__general-input.general-input-error {
@@ -138,13 +139,13 @@
 /* Chrome, Safari, Edge, Opera */
 .form__general-item input::-webkit-outer-spin-button,
 .form__general-item input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 /* Firefox */
 .form__general-item input[type="number"] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 @media (min-width: 768px) {
@@ -155,10 +156,16 @@
 
   .form__general-item input {
     margin-left: 10px;
-    padding: 16px 19px;
+    padding: 10px 19px;
     font-size: 20px;
     line-height: 29px;
     height: 52px;
+    align-items: center;
+  }
+
+  .form__general-input:focus-within,
+  .form__general-input:active {
+    padding: 9px 18px;
   }
 
   .form__general-item:nth-child(1) input {
@@ -179,6 +186,16 @@
   .form__general-item:nth-child(3) input {
     margin-left: 11px;
     padding-left: 17px;
+  }
+
+  .form__general-item:nth-child(3) input:focus-within,
+  .form__general-item:nth-child(3) input:active {
+    padding-left: 16px;
+  }
+
+  .form__general-input:focus-within,
+  .form__general-input:active {
+    padding: 16px 19px;
   }
 }
 
@@ -301,11 +318,11 @@
 
 .form__radio + label {
   cursor: pointer;
+  outline: none;
 }
 
 .form__radio:disabled + label {
   opacity: 0.3;
-  cursor: auto;
 }
 
 .form__radio + label::before {
@@ -321,8 +338,11 @@
 }
 
 .form__radio + label:hover::before,
-.form__radio + label:focus-within::before,
 .form__radio + label:focus::before {
+  border: 1px solid @radio;
+}
+
+.form__radio:focus label::before {
   border: 1px solid @radio;
 }
 
@@ -366,7 +386,7 @@
     width: 18px;
     height: 18px;
     top: 12px;
-    left: 40px;
+    left: 39.5px;
   }
 }
 
@@ -452,7 +472,7 @@
   background-color: @basic-white;
 }
 
-.form__details--title {
+.form__title--details {
   width: 187px;
   padding-right: 15px;
 }
@@ -464,7 +484,7 @@
     margin-left: -30px;
   }
 
-  .form__details--title {
+  .form__title--details {
     width: 512px;
     padding-right: 42px;
     padding-left: 40px;
@@ -551,10 +571,7 @@
 .form__details-item input:focus-within,
 .form__details-item input:active {
   border: 2px solid @dark-grey-100;
-}
-
-.form__details-item svg {
-  stroke: @basic-black;
+  padding: 14px 15px;
 }
 
 .form__details-item input:focus-within + svg,
@@ -580,6 +597,7 @@
   position: absolute;
   right: 15px;
   top: 15px;
+  stroke: @basic-black;
 }
 
 .form__details-item:nth-child(2) svg {
@@ -612,9 +630,19 @@
     height: 52px;
   }
 
+  .form__details-item input:focus-within,
+  .form__details-item input:active {
+    padding: 1px 20px;
+  }
+
   .form__details-item:nth-child(1) input {
     margin-left: 19px;
     padding-left: 19px;
+  }
+
+  .form__details-item:nth-child(1) input:focus-within,
+  .form__details-item:nth-child(1) input:active {
+    padding-left: 18px;
   }
 
   .form__details-item:nth-child(2) input {
@@ -622,6 +650,10 @@
     padding-left: 19px;
   }
 
+  .form__details-item:nth-child(2) input:focus-within,
+  .form__details-item:nth-child(2) input:active {
+    padding-left: 18px;
+  }
 
   .form__details-item svg {
     right: 52px;
@@ -659,13 +691,13 @@
   margin-top: 23px;
 }
 
-.form__comments--title {
+.form__title--comments {
   width: 121px;
   padding-right: 22px;
 }
 
 @media (min-width: 768px) {
-  .form__comments--title {
+  .form__title--comments {
     width: 182px;
     padding-right: 40px;
     padding-left: 40px;
@@ -783,13 +815,13 @@
   }
 }
 
-.form__additional--title {
+.form__title--additional {
   width: 141px;
   padding-right: 24px;
 }
 
 @media (min-width: 768px) {
-  .form__additional--title {
+  .form__title--additional {
     width: 212px;
     padding-right: 41px;
     padding-left: 40px;
@@ -848,7 +880,6 @@
 
 .form__additional-information-checkbox:disabled + label {
   opacity: 0.3;
-  cursor: auto;
 }
 
 .form__additional-information-checkbox + label::before {
@@ -863,9 +894,16 @@
 }
 
 .form__additional-information-checkbox + label:hover::before,
-.form__additional-information-checkbox + label:focus::before,
-.form__additional-information-checkbox + label:focus-within::before  {
+.form__additional-information-checkbox + label:focus::before {
   border: 1px solid @radio;
+}
+
+.form__additional-information-checkbox:focus + label::before {
+  border: 1px solid @radio;
+}
+
+.form__additional-information label {
+  outline: none;
 }
 
 @media (min-width: 768px) {
