@@ -2481,7 +2481,7 @@ img {
   margin-left: 14px;
   padding: 12px 15px;
   box-sizing: border-box;
-  width: 1000%;
+  width: 100%;
   border: 1px solid #E7E7E7;
   outline: none;
   height: 45px;
@@ -2489,8 +2489,7 @@ img {
 .form__general-input:hover {
   border: 1px solid #CDCDCD;
 }
-.form__general-input:focus-within,
-.form__general-input:active {
+.form__general-input:focus {
   border: 2px solid #444444;
   padding: 11px 14px;
 }
@@ -2520,9 +2519,8 @@ img {
     height: 52px;
     align-items: center;
   }
-  .form__general-input:focus-within,
-  .form__general-input:active {
-    padding: 10px 18px;
+  .form__general-input:focus {
+    padding: 9px 18px;
   }
   .form__general-item:nth-child(1) input {
     margin-left: 15px;
@@ -2540,13 +2538,11 @@ img {
     margin-left: 11px;
     padding-left: 16px;
   }
-  .form__general-item:nth-child(3) input:focus-within,
-  .form__general-item:nth-child(3) input:active {
+  .form__general-item:nth-child(3) input:focus {
     padding-left: 15px;
   }
-  .form__general-input:focus-within,
-  .form__general-input:active {
-    padding: 10px 19px;
+  .form__general-input:focus {
+    padding: 9px 19px;
   }
 }
 .form__additionally {
@@ -2866,13 +2862,11 @@ img {
   color: #444444;
   height: 45px;
 }
-.form__details-item input:focus-within,
-.form__details-item input:active {
+.form__details-item input:focus {
   border: 2px solid #444444;
   padding: 11px 15px;
 }
-.form__details-item input:focus-within + svg,
-.form__details-item input:active + svg {
+.form__details-item input:focus + svg {
   stroke: #68B738;
 }
 .form__details-item input:invalid {
@@ -2921,8 +2915,7 @@ img {
     margin-left: 19px;
     padding-left: 19px;
   }
-  .form__details-item:nth-child(1) input:focus-within,
-  .form__details-item:nth-child(1) input:active {
+  .form__details-item:nth-child(1) input:focus {
     padding: 9px 21px;
     padding-left: 18px;
   }
@@ -2930,8 +2923,7 @@ img {
     margin-left: 13px;
     padding-left: 19px;
   }
-  .form__details-item:nth-child(2) input:focus-within,
-  .form__details-item:nth-child(2) input:active {
+  .form__details-item:nth-child(2) input:focus {
     padding: 9px 21px;
     padding-left: 18px;
   }
