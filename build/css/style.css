@@ -2492,7 +2492,7 @@ img {
 .form__general-input:focus-within,
 .form__general-input:active {
   border: 2px solid #444444;
-  padding: 12px 15px;
+  padding: 11px 14px;
 }
 .form__general-input.general-input-error {
   border: 2px solid #FF8282;
@@ -2522,7 +2522,7 @@ img {
   }
   .form__general-input:focus-within,
   .form__general-input:active {
-    padding: 10px 19px;
+    padding: 10px 18px;
   }
   .form__general-item:nth-child(1) input {
     margin-left: 15px;
@@ -2542,11 +2542,11 @@ img {
   }
   .form__general-item:nth-child(3) input:focus-within,
   .form__general-item:nth-child(3) input:active {
-    padding-left: 16px;
+    padding-left: 15px;
   }
   .form__general-input:focus-within,
   .form__general-input:active {
-    padding: 10px 20px;
+    padding: 10px 19px;
   }
 }
 .form__additionally {
@@ -2869,7 +2869,7 @@ img {
 .form__details-item input:focus-within,
 .form__details-item input:active {
   border: 2px solid #444444;
-  padding: 12px 16px;
+  padding: 11px 15px;
 }
 .form__details-item input:focus-within + svg,
 .form__details-item input:active + svg {
@@ -2917,17 +2917,14 @@ img {
     margin-right: 35px;
     height: 52px;
   }
-  .form__details-item input:focus-within,
-  .form__details-item input:active {
-    padding: 1px 20px;
-  }
   .form__details-item:nth-child(1) input {
     margin-left: 19px;
     padding-left: 19px;
   }
   .form__details-item:nth-child(1) input:focus-within,
   .form__details-item:nth-child(1) input:active {
-    padding: 10px 19px;
+    padding: 9px 21px;
+    padding-left: 18px;
   }
   .form__details-item:nth-child(2) input {
     margin-left: 13px;
@@ -2935,7 +2932,8 @@ img {
   }
   .form__details-item:nth-child(2) input:focus-within,
   .form__details-item:nth-child(2) input:active {
-    padding: 10px 19px;
+    padding: 9px 21px;
+    padding-left: 18px;
   }
   .form__details-item svg {
     right: 52px;
